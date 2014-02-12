@@ -1,0 +1,45 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #bbb;
+}
+
+h1 span {
+  font-size: 20px;
+}
+
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+
+.container:before,
+.container:after {
+  content: " ";
+  display: table;
+}
+
+.container:after {
+  clear: both;
+}
+
+.container {
+  *zoom: 1;
+}
+
+.left,
+.right {
+  text-align: center;
+  width: 50%;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
