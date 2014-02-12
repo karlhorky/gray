@@ -33,4 +33,3 @@ TODO
 
 * feature detection for SVG filters instead of client detection
 * better JavaScript templating for SVG
-* bower component
