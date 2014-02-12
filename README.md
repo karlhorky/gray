@@ -21,7 +21,7 @@ bower install gray
 ```
 
 1. Add the CSS from [gray.css](https://github.com/kununu-labs/gray/blob/master/css/gray.css).
-2. Add the plugin after jQuery at the bottom of the document.
+2. Add the plugin after jQuery at the bottom of the body.
 
     ```html
     <script src="/js/jquery.gray.min.js"></script>
