@@ -1,9 +1,9 @@
 body {
   font-family: 'Open Sans', sans-serif;
+  text-align: center;
 }
 
 h1 {
-  text-align: center;
   color: #bbb;
 }
 
@@ -12,7 +12,7 @@ h1 span {
 }
 
 .container {
-  width: 800px;
+  width: 60%;
   margin: 0 auto;
 }
 
@@ -30,16 +30,7 @@ h1 span {
   *zoom: 1;
 }
 
-.left,
-.right {
-  text-align: center;
-  width: 50%;
-}
-
-.left {
+.col-half {
   float: left;
-}
-
-.right {
-  float: right;
+  width: 50%;
 }
