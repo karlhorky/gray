@@ -14,6 +14,12 @@ Support:
 How to Use
 ----------
 
+[Download](https://github.com/kununu-labs/gray/archive/master.zip) or install with bower.
+
+```
+bower install gray
+```
+
 1. Add the CSS from [gray.css](https://github.com/kununu-labs/gray/blob/master/css/gray.css).
 2. Add the plugin after jQuery at the bottom of the document.
 
