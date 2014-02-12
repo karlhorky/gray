@@ -1,6 +1,7 @@
 body {
   font-family: 'Open Sans', sans-serif;
   text-align: center;
+  padding-top: 100px;
 }
 
 h1 {
@@ -12,25 +13,33 @@ h1 span {
 }
 
 .container {
-  width: 60%;
+  width: 80%;
+  max-width: 740px;
   margin: 0 auto;
 }
 
-.container:before,
-.container:after {
+.row:before,
+.row:after {
   content: " ";
   display: table;
 }
 
-.container:after {
+.row:after {
   clear: both;
 }
 
-.container {
+.row {
   *zoom: 1;
 }
 
-.col-half {
-  float: left;
-  width: 50%;
+
+@media (min-width: 481px) {
+  body {
+    padding-top: 0;
+  }
+
+  .col-half {
+    float: left;
+    width: 50%;
+  }
 }
