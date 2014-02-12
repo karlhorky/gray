@@ -14,7 +14,7 @@ Support:
 How to Use
 ----------
 
-1. Add the CSS in [gray.css](https://github.com/kununu-labs/gray/blob/master/css/gray.css).
+1. Add the CSS from [gray.css](https://github.com/kununu-labs/gray/blob/master/css/gray.css).
 2. Add the plugin after jQuery at the bottom of the document.
 
     ```html
@@ -31,6 +31,6 @@ How to Use
 TODO
 ----
 
-* feature detection for SVG filters (increased compat?)
+* feature detection for SVG filters instead of client detection
 * better JavaScript templating for SVG
 * bower component
