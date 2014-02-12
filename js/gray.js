@@ -1,13 +1,11 @@
 ;(function ($, window, document, undefined) {
 
-  var pluginName = "gray",
-      defaults = {
-        propertyName: "value"
-      };
+  var pluginName = 'gray',
+      defaults = {};
 
-  function Plugin ( element, options ) {
+  function Plugin (element, options) {
     this.element = element;
-    this.settings = $.extend( {}, defaults, options );
+    this.settings = $.extend({}, defaults, options);
     this._defaults = defaults;
     this._name = pluginName;
     this.init();
@@ -53,13 +51,17 @@
     }
   };
 
-  $.fn[ pluginName ] = function ( options ) {
+  $.fn[pluginName] = function (options) {
     this.each(function() {
-      if ( !$.data( this, "plugin_" + pluginName ) ) {
-        $.data( this, "plugin_" + pluginName, new Plugin( this, options ) );
+      if (!$.data(this, 'plugin_' + pluginName)) {
+        $.data(this, 'plugin_' + pluginName, new Plugin(this, options));
       }
     });
     return this;
   };
 
-})( jQuery, window, document );
+  $(window).on('load', function() {
+    $('.grayscale')[pluginName]();
+  });
+
+})(jQuery, window, document);
