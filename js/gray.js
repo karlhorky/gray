@@ -17,7 +17,7 @@
   Plugin.prototype = {
     init: function () {
       // TODO: better feature detection
-      if (isIE10 || isIE11) {
+      if (this.isIE10 || this.isIE11) {
         this.switchImage();
       }
     },
