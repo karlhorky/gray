@@ -5,7 +5,6 @@
         propertyName: "value"
       };
 
-  // The actual plugin constructor
   function Plugin ( element, options ) {
     this.element = element;
     this.settings = $.extend( {}, defaults, options );
