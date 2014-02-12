@@ -18,7 +18,7 @@ How to Use
 2. Add the plugin after jQuery at the bottom of the document.
 
     ```html
-    <script src="/js/gray.js"></script>
+    <script src="/js/jquery.gray.min.js"></script>
     ```
 
 3. Add your image with a class of ```grayscale```.
