@@ -12,6 +12,19 @@ h1 span {
   font-size: 20px;
 }
 
+h3 {
+  font-size: 14px;
+  text-align: left;
+  background: #cfcfcf;
+  margin: 20px 0 25px;
+}
+
+h3 span {
+  display: inline-block;
+  padding: 8px 10px;
+  color: #fff;
+}
+
 .container {
   width: 80%;
   max-width: 740px;

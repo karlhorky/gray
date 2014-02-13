@@ -37,6 +37,6 @@ bower install gray
 TODO
 ----
 
-* coming soon: apply grayscale to background images
+* fix title layout on demo page on small screens
 * feature detection for SVG filters instead of client detection
 * better JavaScript templating for SVG

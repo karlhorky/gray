@@ -6,5 +6,5 @@
   filter: gray;
 
   /* Chrome 19+, Safari 6+, Safari 6+ iOS */
-  -webkit-filter: grayscale(100%);
+  /*-webkit-filter: grayscale(100%);*/
 }
