@@ -101,9 +101,9 @@
       if (backgroundSize !== 'auto' && backgroundSize !== 'cover' && backgroundSize !== 'contain' && backgroundSize !== 'inherit') {
         var $element = $(this.element);
 
-        ratio    = $element.width() / $element.height();
-        w        = (parseInt(backgroundSize.match(/^(\d+)px/)) || [null, null])[1];
-        h        = (parseInt(backgroundSize.match(/\s(\d+)px$/)) || [null, null])[1];
+        ratio    = img.width / img.height;
+        w        = parseInt((backgroundSize.match(/^(\d+)px/) || [0,0])[1]);
+        h        = parseInt((backgroundSize.match(/\s(\d+)px$/) || [0,0])[1]);
         defaultW = $element.height() * ratio;
         defaultH = $element.width() / ratio;
         w        = w || defaultW;
