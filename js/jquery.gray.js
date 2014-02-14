@@ -40,16 +40,29 @@
       return type;
     },
 
-    extractUrl: function(cssValue) {
+    extractUrl: function(backgroundImage) {
       var url,
           regex;
 
       startRegex = /^url\(["']?/;
       endRegex   = /["']?\)$/;
-      url = cssValue.replace(startRegex, '')
-                    .replace(endRegex, '');
+      url = backgroundImage.replace(startRegex, '')
+                           .replace(endRegex, '');
 
       return url;
+    },
+
+    positionToNegativeMargin: function(backgroundPosition) {
+      var x,
+          y,
+          margin;
+
+      x = backgroundPosition.match(/^(-?\d+\S+)/)[0]
+      y = backgroundPosition.match(/\s(-?\d+\S+)$/)[0]
+
+      margin = 'margin:' + y + ' 0 0 ' + x;
+
+      return margin;
     },
 
     getParams: function(element) {
@@ -62,17 +75,73 @@
 
       params.width  = element.width();
       params.height = element.height();
-      params.url    = element[0].src;
+      params.svg    = {
+        url   : element[0].src,
+        width : params.width,
+        height: params.height,
+        offset: ''
+      };
 
       return params;
     },
 
+    getBgSize: function(url, backgroundSize) {
+      var img,
+          ratio,
+          defaultW,
+          w,
+          defaultH,
+          h,
+          size;
+
+      img = new Image();
+      img.src = url;
+
+      // TODO: Break this up or simplify
+      if (backgroundSize !== 'auto' && backgroundSize !== 'cover' && backgroundSize !== 'contain' && backgroundSize !== 'inherit') {
+        var $element = $(this.element);
+
+        ratio    = $element.width() / $element.height();
+        w        = (parseInt(backgroundSize.match(/^(\d+)px/)) || [null, null])[1];
+        h        = (parseInt(backgroundSize.match(/\s(\d+)px$/)) || [null, null])[1];
+        defaultW = $element.height() * ratio;
+        defaultH = $element.width() / ratio;
+        w        = w || defaultW;
+        h        = h || defaultH;
+      }
+
+      if (w || h) {
+        size = {
+          width: w,
+          height: h
+        }
+      } else {
+
+        size = {
+          width : img.width,
+          height: img.height
+        };
+      }
+
+      return size;
+    },
+
     getBgParams: function(element) {
-      var params = {};
+      var params = {},
+          url,
+          position;
+
+      url       = this.extractUrl(element.css('background-image'));
+      bgSize    = this.getBgSize(url, element.css('background-size'))
+      offset    = this.positionToNegativeMargin(element.css('background-position'));
 
       params.width  = element.width();
       params.height = element.height();
-      params.url    = this.extractUrl(element.css('background-image'));
+      params.svg    = $.extend(
+        { url   : url },
+        bgSize,
+        { offset: offset }
+      );
 
       return params;
     },
@@ -85,15 +154,17 @@
 
       // TODO: use templating here
       template = $(
-        '<svg xmlns="http://www.w3.org/2000/svg" id="svgroot" viewBox="0 0 '+params.width+' '+params.height+'" width="'+params.width+'" height="'+params.height+'">' +
-          '<defs>' +
-            '<filter id="gray">' +
-              '<feComposite in="SourceGraphic" in2="SourceGraphic" operator="arithmetic" k1="0" k2="1" k3="0" k4="0" />' +
-              '<feColorMatrix type="saturate" values="0" />' +
-            '</filter>' +
-          '</defs>' +
-          '<image filter="url(&quot;#gray&quot;)" x="0" y="0" width="'+params.width+'" height="'+params.height+'" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="'+params.url+'" />' +
-        '</svg>');
+        '<div style="display:inline-block;overflow:hidden;width:'+params.width+'px;height:'+params.height+'px;">' +
+          '<svg xmlns="http://www.w3.org/2000/svg" id="svgroot" viewBox="0 0 '+params.svg.width+' '+params.svg.height+'" width="'+params.svg.width+'" height="'+params.svg.height+'" style="'+params.svg.offset+'">' +
+            '<defs>' +
+              '<filter id="gray">' +
+                '<feComposite in="SourceGraphic" in2="SourceGraphic" operator="arithmetic" k1="0" k2="1" k3="0" k4="0" />' +
+                '<feColorMatrix type="saturate" values="0" />' +
+              '</filter>' +
+            '</defs>' +
+            '<image filter="url(&quot;#gray&quot;)" x="0" y="0" width="'+params.svg.width+'" height="'+params.svg.height+'" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="'+params.svg.url+'" />' +
+          '</svg>' +
+        '</div>');
 
       element.replaceWith(template);
     }
