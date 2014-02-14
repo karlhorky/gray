@@ -37,6 +37,7 @@ bower install gray
 TODO
 ----
 
+* documentation for background-image, -position, -size methods
 * fix title layout on demo page on small screens
 * feature detection for SVG filters instead of client detection
 * better JavaScript templating for SVG
