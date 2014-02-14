@@ -15,7 +15,7 @@
 
     init: function () {
       // TODO: better feature detection
-      if (true || this.isIE10() || this.isIE11()) {
+      if (this.isIE10() || this.isIE11()) {
         this.switchImage();
       }
     },
