@@ -14,10 +14,10 @@ Support:
 How to Use
 ----------
 
-[Download](https://github.com/kununu-labs/gray/archive/master.zip) or install with bower.
+[Download](https://github.com/kununu-labs/gray/archive/master.zip) or install using [Bower](http://bower.io).
 
-```
-bower install gray
+```shell
+bower install --save gray
 ```
 
 1. Add the CSS from [gray.css](https://github.com/kununu-labs/gray/blob/master/css/gray.css).
