@@ -28,16 +28,30 @@ bower install --save gray
     ```
 
 3. Add your image with a class of ```grayscale```.
-   ```html
-   <img src="/img/color.jpg" class="grayscale">
-   ```
+
+    ```html
+    <img src="/img/color.jpg" class="grayscale">
+    ```
+
+    Images with CSS background-image, background-size and (numeric) background-position are also supported:
+
+    ```html
+    <div style="
+      background-image   : url(/img/color-sprite-lg.png);
+      background-size    : auto 72px;
+      background-position: -180px 0;
+      display            : inline-block;
+      width              : 180px;
+      height             : 72px;
+    " class="grayscale"></div>
+    ```
 
 4. Revel in your absolute and utter awesomeness.
 
 TODO
 ----
 
-* documentation for background-image, -position, -size methods
+* background-size: cover, background-size: contain
 * fix title layout on demo page on small screens
 * feature detection for SVG filters instead of client detection
 * better JavaScript templating for SVG
