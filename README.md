@@ -52,7 +52,6 @@ TODO
 ----
 
 * background-size: cover, background-size: contain
-* fix title layout on demo page on small screens
 * feature detection for SVG filters instead of client detection
 * better JavaScript templating for SVG
 * support for transitioning back to color
