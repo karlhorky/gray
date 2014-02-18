@@ -1,7 +1,7 @@
 body {
   font-family: 'Open Sans', sans-serif;
   text-align: center;
-  padding-top: 100px;
+  padding: 40px 0;
 }
 
 h1 {
@@ -43,6 +43,32 @@ h3 span {
 
 .row {
   *zoom: 1;
+}
+
+@media (max-width: 480px) {
+  h1 span {
+    display: block;
+  }
+
+  h2 {
+    display: none;
+  }
+
+  .label-one:before,
+  .label-two:before {
+    font-size: 15px;
+    color: #999;
+    display: block;
+    margin: 15px 0 10px;
+  }
+
+  .label-one:before {
+    content: 'Color';
+  }
+
+  .label-two:before {
+    content: 'Gray';
+  }
 }
 
 
