@@ -54,19 +54,15 @@ h3 span {
     display: none;
   }
 
-  .label-one:before,
-  .label-two:before {
+  h3 ~ .col-half:before {
+    content: 'Color';
     font-size: 15px;
     color: #999;
     display: block;
     margin: 15px 0 10px;
   }
 
-  .label-one:before {
-    content: 'Color';
-  }
-
-  .label-two:before {
+  h3 + .col-half + .col-half:before {
     content: 'Gray';
   }
 }
