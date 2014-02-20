@@ -10,6 +10,7 @@ Support:
 * Firefox 10+, Firefox on Android
 * Chrome 19+, Chrome for Android 25+
 * Safari 6+, Safari iOS 6+
+* Opera 15+
 
 How to Use
 ----------

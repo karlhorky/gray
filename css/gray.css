@@ -5,6 +5,11 @@
   /* IE 6-9 */
   filter: gray;
 
-  /* Chrome 19+, Safari 6+, Safari 6+ iOS */
+  /*
+    Chrome 19+,
+    Safari 6+,
+    Safari 6+ iOS,
+    Opera 15+
+  */
   -webkit-filter: grayscale(100%);
 }
