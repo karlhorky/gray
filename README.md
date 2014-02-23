@@ -49,6 +49,13 @@ bower install --save gray
 
 4. Revel in your absolute and utter awesomeness.
 
+Changelog
+---------
+
+* v1.1.1: Improve documentation and demo
+* v1.1.0: Support for background images with basic background-size and background-position
+* v1.0.0: First basic version with support for &lt;img&gt; tags
+
 TODO
 ----
 
@@ -56,3 +63,9 @@ TODO
 * feature detection for SVG filters instead of client detection
 * better JavaScript templating for SVG
 * support for transitioning back to color
+
+
+License
+-------
+
+MIT &copy; kununu
