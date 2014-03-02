@@ -52,6 +52,7 @@ bower install --save gray
 Changelog
 ---------
 
+* v1.2.0: IE shim: Copy styles from element to replacement element
 * v1.1.1: Improve documentation and demo
 * v1.1.0: Support for background images with basic background-size and background-position
 * v1.0.0: First basic version with support for &lt;img&gt; tags
