@@ -45,6 +45,12 @@ h3 span {
   *zoom: 1;
 }
 
+h3 + .col-half,
+h3 + .col-half + .col-half {
+  position: relative;
+  height: 77px;
+}
+
 @media (max-width: 480px) {
   h1 span {
     display: block;
