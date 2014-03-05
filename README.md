@@ -27,6 +27,12 @@ bower install --save gray
     ```html
     <script src="/js/jquery.gray.min.js"></script>
     ```
+    
+    The plugin automatically initializes for all elements with a class of ```grayscale```. The plugin can also be called manually with:
+    
+    ```javascript
+    $('.my-grayscale-class').gray();
+    ```
 
 3. Add your image with a class of ```grayscale```.
 
