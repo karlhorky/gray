@@ -9,8 +9,10 @@ Support:
 * IE 10-11 (inline SVG via JavaScript)
 * Firefox 10+, Firefox on Android
 * Chrome 19+, Chrome for Android 25+
+* Android Browser 4.4+
 * Safari 6+, Safari iOS 6+
-* Opera 15+
+* Opera 15+, Opera Mobile 16+
+* BlackBerry Browser 10+
 
 How to Use
 ----------
