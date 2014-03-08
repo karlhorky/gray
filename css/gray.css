@@ -13,3 +13,21 @@
   */
   -webkit-filter: grayscale(100%);
 }
+
+.grayscale.fade {
+  -webkit-transition: -webkit-filter .5s;
+}
+
+.grayscale.fade:hover {
+  -webkit-filter: grayscale(0%);
+}
+
+.grayscale-replaced.fade svg {
+  opacity: 1;
+  -webkit-transition: opacity .5s ease;
+  transition: opacity .5s ease;
+}
+
+.grayscale-replaced.fade:hover svg {
+  opacity: 0;
+}

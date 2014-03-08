@@ -6,9 +6,13 @@
 ;(function ($, window, document, undefined) {
 
   var pluginName = 'gray',
-      defaults = {};
+      defaults = {
+        fade: false
+      };
 
   function Plugin (element, options) {
+    options = options || {};
+    options.fade = options.fade || element.className.indexOf('fade') > -1;
     this.element = element;
     this.settings = $.extend({}, defaults, options);
     this._defaults = defaults;
@@ -25,7 +29,9 @@
       ) {
         element = $(this.element);
 
+        if (this.cssFilterDeprecated(element) || this.settings.fade) {
           this.switchImage(element);
+        }
       }
     },
 
@@ -166,12 +172,21 @@
       return params;
     },
 
+    setFadeStyles: function(styles, url) {
+      styles['background-image'] = 'url("' + url + '")';
+      delete styles['filter'];
+
+      return styles;
+    },
+
     switchImage: function(element) {
       var params,
           classes,
           template;
 
       params = this.getParams(element);
+
+      classes = this.settings.fade ? 'fade' : '';
 
       // TODO: use templating or DOM elements here
       template = $(
@@ -191,6 +206,10 @@
       params.styles['overflow'] =
         params.styles['overflow-x'] =
         params.styles['overflow-y'] = 'hidden';
+
+      if (this.settings.fade) {
+        params.styles = this.setFadeStyles(params.styles, params.svg.url);
+      }
 
       // TODO: Should this really set all params or should we set only unique ones by comparing to a control element?
       template.css(params.styles);
