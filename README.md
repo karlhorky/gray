@@ -66,6 +66,7 @@ bower install --save gray
 Changelog
 ---------
 
+* v1.3.1: bugfix for empty gray class name
 * v1.3.0: rename fade class to grayscale-fade to resolve conflict with bootstrap
 * v1.2.0: IE shim: Copy styles from element to replacement element
 * v1.1.1: Improve documentation and demo
