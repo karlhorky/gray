@@ -20,6 +20,7 @@
 
 .grayscale.grayscale-fade:hover {
   -webkit-filter: grayscale(0%);
+  filter: none;
 }
 
 .grayscale-replaced.grayscale-fade svg {
