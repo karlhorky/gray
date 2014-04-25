@@ -188,7 +188,7 @@
 
       params = this.getParams(element);
 
-      classes = this.settings.fade ? 'fade' : '';
+      classes = this.settings.fade ? 'grayscale-fade' : '';
 
       // TODO: use templating or DOM elements here
       template = $(
