@@ -55,10 +55,10 @@ bower install --save gray
     " class="grayscale"></div>
     ```
 
-4. (Optional) Add class of ```grayfade``` if you want transitioning from grayscale back to color on hover
+4. (Optional) Add class of ```grayscale-fade``` if you want transitioning from grayscale back to color on hover
 
     ```html
-    <img src="/img/color.jpg" class="grayscale grayfade">
+    <img src="/img/color.jpg" class="grayscale grayscale-fade">
     ```
 
 5. Revel in your absolute and utter awesomeness.
@@ -66,7 +66,7 @@ bower install --save gray
 Changelog
 ---------
 
-* v1.3.0: rename fade class to grayfade to resolve conflict with bootstrap
+* v1.3.0: rename fade class to grayscale-fade to resolve conflict with bootstrap
 * v1.2.0: IE shim: Copy styles from element to replacement element
 * v1.1.1: Improve documentation and demo
 * v1.1.0: Support for background images with basic background-size and background-position

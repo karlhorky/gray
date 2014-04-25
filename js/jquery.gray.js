@@ -14,7 +14,7 @@
     options = options || {};
     options.fade = options.fade ||
                    element.className.indexOf('fade') > -1 ||
-                   element.className.indexOf('grayfade') > -1;
+                   element.className.indexOf('grayscale-fade') > -1;
     this.element = element;
     this.settings = $.extend({}, defaults, options);
     this._defaults = defaults;
