@@ -16,8 +16,8 @@
   function Plugin (element, options) {
     options = options || {};
 
-    options.classes = options.classes || {};
-    fadeClass = options.classes.fade || defaults.classes.fade;
+    classes = options.classes || {};
+    fadeClass = classes.fade || defaults.classes.fade;
     options.fade = options.fade || element.className.indexOf(fadeClass) > -1;
 
     this.element = element;
