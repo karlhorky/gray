@@ -12,9 +12,7 @@
 
   function Plugin (element, options) {
     options = options || {};
-    options.fade = options.fade ||
-                   element.className.indexOf('fade') > -1 ||
-                   element.className.indexOf('grayscale-fade') > -1;
+    options.fade = options.fade || element.className.indexOf('grayscale-fade') > -1;
     this.element = element;
     this.settings = $.extend({}, defaults, options);
     this._defaults = defaults;
@@ -188,7 +186,7 @@
 
       params = this.getParams(element);
 
-      classes = this.settings.fade ? 'fade' : '';
+      classes = this.settings.fade ? 'grayscale-fade' : '';
 
       // TODO: use templating or DOM elements here
       template = $(
