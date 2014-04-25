@@ -14,20 +14,24 @@
   -webkit-filter: grayscale(100%);
 }
 
-.grayscale.fade {
+.grayscale.fade,
+.grayscale.grayfade {
   -webkit-transition: -webkit-filter .5s;
 }
 
-.grayscale.fade:hover {
+.grayscale.fade:hover,
+.grayscale.grayfade:hover {
   -webkit-filter: grayscale(0%);
 }
 
-.grayscale-replaced.fade svg {
+.grayscale-replaced.fade svg,
+.grayscale-replaced.grayfade svg {
   opacity: 1;
   -webkit-transition: opacity .5s ease;
   transition: opacity .5s ease;
 }
 
-.grayscale-replaced.fade:hover svg {
+.grayscale-replaced.fade:hover svg,
+.grayscale-replaced.grayfade:hover svg {
   opacity: 0;
 }
