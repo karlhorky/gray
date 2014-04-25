@@ -66,6 +66,7 @@ bower install --save gray
 Changelog
 ---------
 
+* v1.3.2: remove grayscale on hover in ie6-9 (fade option), use same svg filter in polyfill as in css
 * v1.3.1: bugfix for empty gray class name
 * v1.3.0: rename fade class to grayscale-fade to resolve conflict with bootstrap
 * v1.2.0: IE shim: Copy styles from element to replacement element
