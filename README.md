@@ -29,9 +29,9 @@ bower install --save gray
     ```html
     <script src="/js/jquery.gray.min.js"></script>
     ```
-    
+
     The plugin automatically initializes for all elements with a class of ```grayscale```. The plugin can also be called manually with:
-    
+
     ```javascript
     $('.my-grayscale-class').gray();
     ```
@@ -55,11 +55,18 @@ bower install --save gray
     " class="grayscale"></div>
     ```
 
-4. Revel in your absolute and utter awesomeness.
+4. (Optional) Add class of ```grayscale-fade``` if you want transitioning from grayscale back to color on hover
+
+    ```html
+    <img src="/img/color.jpg" class="grayscale grayscale-fade">
+    ```
+
+5. Revel in your absolute and utter awesomeness.
 
 Changelog
 ---------
 
+* v1.3.0: rename fade class to grayscale-fade to resolve conflict with bootstrap
 * v1.2.0: IE shim: Copy styles from element to replacement element
 * v1.1.1: Improve documentation and demo
 * v1.1.0: Support for background images with basic background-size and background-position
@@ -71,7 +78,6 @@ TODO
 * background-size: cover, background-size: contain
 * feature detection for SVG filters instead of client detection
 * better JavaScript templating for SVG
-* support for transitioning back to color
 
 
 License

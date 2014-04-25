@@ -7,12 +7,19 @@
 
   var pluginName = 'gray',
       defaults = {
-        fade: false
+        fade   : false,
+        classes: {
+          fade: 'grayscale-fade'
+        }
       };
 
   function Plugin (element, options) {
     options = options || {};
-    options.fade = options.fade || element.className.indexOf('fade') > -1;
+
+    options.classes = options.classes || {};
+    fadeClass = options.classes.fade || defaults.classes.fade;
+    options.fade = options.fade || element.className.indexOf(fadeClass) > -1;
+
     this.element = element;
     this.settings = $.extend({}, defaults, options);
     this._defaults = defaults;
@@ -186,7 +193,7 @@
 
       params = this.getParams(element);
 
-      classes = this.settings.fade ? 'fade' : '';
+      classes = this.settings.fade ? this.settings.classes.fade : '';
 
       // TODO: use templating or DOM elements here
       template = $(
