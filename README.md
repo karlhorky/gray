@@ -14,14 +14,26 @@ Support:
 * Opera 15+, Opera Mobile 16+
 * BlackBerry Browser 10+
 
-How to Use
-----------
+Installation
+------------
 
-[Download](https://github.com/kununu/gray/archive/gh-pages.zip) or install using [Bower](http://bower.io).
+### [Bower](http://bower.io)
 
 ```shell
 bower install --save gray
 ```
+
+### CDN
+
+```
+//cdn.jsdelivr.net/jquery.gray/1.3.2/gray.min.css
+//cdn.jsdelivr.net/jquery.gray/1.3.2/jquery.gray.min.js
+```
+    
+### [Download](https://github.com/kununu/gray/archive/gh-pages.zip)
+
+How to Use
+----------
 
 1. Add the CSS from [gray.css](https://github.com/kununu/gray/blob/gh-pages/css/gray.css).
 2. Add the plugin after jQuery at the bottom of the body.
