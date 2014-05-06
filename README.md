@@ -17,20 +17,20 @@ Support:
 Installation
 ------------
 
-### [Bower](http://bower.io)
+You can install with [Bower](http://bower.io):
 
 ```shell
 bower install --save gray
 ```
 
-### CDN
+Or use the CDN links:
 
 ```
 //cdn.jsdelivr.net/jquery.gray/1.3.2/gray.min.css
 //cdn.jsdelivr.net/jquery.gray/1.3.2/jquery.gray.min.js
 ```
     
-### [Download](https://github.com/kununu/gray/archive/gh-pages.zip)
+Or you can just [download](https://github.com/kununu/gray/archive/gh-pages.zip) it.
 
 How to Use
 ----------
