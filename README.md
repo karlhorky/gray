@@ -92,8 +92,6 @@ TODO
 
 * background-size: cover, background-size: contain
 * better JavaScript templating for SVG
-* read CSS properties from stylesheets to match CSS behavior in polyfill (ex. hover)
-
 
 License
 -------
