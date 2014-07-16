@@ -92,6 +92,7 @@ TODO
 
 * background-size: cover, background-size: contain
 * better JavaScript templating for SVG
+* example for [fading to gray instead of color](https://github.com/kununu/gray/issues/6)
 
 License
 -------
