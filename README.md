@@ -91,8 +91,8 @@ TODO
 ----
 
 * background-size: cover, background-size: contain
-* feature detection for SVG filters instead of client detection
 * better JavaScript templating for SVG
+* read CSS properties from stylesheets to match CSS behavior in polyfill (ex. hover)
 
 
 License
