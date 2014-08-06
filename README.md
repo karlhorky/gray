@@ -1,7 +1,7 @@
 gray
 ====
 
-Make an image gray in all browsers. [Demo](http://kununu.github.io/gray/).
+Make an image gray in all browsers. [Demo](http://work.karlhorky.com/gray/).
 
 Support:
 
@@ -30,12 +30,12 @@ Or use the CDN links:
 //cdn.jsdelivr.net/jquery.gray/1.3.3/jquery.gray.min.js
 ```
     
-Or you can just [download](https://github.com/kununu/gray/archive/gh-pages.zip) it.
+Or you can just [download](https://github.com/karlhorky/gray/archive/gh-pages.zip) it.
 
 How to Use
 ----------
 
-1. Add the CSS from [gray.css](https://github.com/kununu/gray/blob/gh-pages/css/gray.css).
+1. Add the CSS from [gray.css](https://github.com/karlhorky/gray/blob/gh-pages/css/gray.css).
 2. Add the plugin after jQuery at the bottom of the body.
 
     ```html
@@ -92,9 +92,9 @@ TODO
 
 * background-size: cover, background-size: contain
 * better JavaScript templating for SVG
-* example for [fading to gray instead of color](https://github.com/kununu/gray/issues/6)
+* example for [fading to gray instead of color](https://github.com/karlhorky/gray/issues/6)
 
 License
 -------
 
-MIT &copy; kununu
+MIT &copy; Karl Horky
