@@ -29,7 +29,7 @@ Or use the CDN links:
 //cdn.jsdelivr.net/jquery.gray/1.3.3/gray.min.css
 //cdn.jsdelivr.net/jquery.gray/1.3.3/jquery.gray.min.js
 ```
-    
+
 Or you can just [download](https://github.com/karlhorky/gray/archive/gh-pages.zip) it.
 
 How to Use
@@ -58,7 +58,7 @@ How to Use
 
     ```html
     <div style="
-      background-image   : url(/img/color-sprite-lg.png);
+      background-image   : url(/img/color-sprite-lg.jpg);
       background-size    : auto 72px;
       background-position: -180px 0;
       display            : inline-block;
