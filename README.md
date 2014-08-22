@@ -75,9 +75,17 @@ How to Use
 
 5. Revel in your absolute and utter awesomeness.
 
+How it Works
+------------
+
+In [supporting browsers](http://caniuse.com/#feat=css-filters), the styles in ```gray.css``` will use CSS filters to turn the image gray.
+
+The ```jquery.gray``` plugin uses the ```Modernizr._prefixes```, ```css-filters```, ```Inline SVG``` and ```svg-filters``` feature detects from Modernizr to determine browser support. If a browser supports inline SVG and SVG filters but not CSS filters, the plugin replaces the elements with SVG elements with filters.
+
 Changelog
 ---------
 
+* v1.3.4: don't override existing modernizr
 * v1.3.3: update minified js to match source
 * v1.3.2: remove grayscale on hover in ie6-9 (fade option), use same svg filter in polyfill as in css
 * v1.3.1: bugfix for empty gray class name
