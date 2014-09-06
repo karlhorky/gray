@@ -26,8 +26,8 @@ bower install --save gray
 Or use the CDN links:
 
 ```
-//cdn.jsdelivr.net/jquery.gray/1.3.4/gray.min.css
-//cdn.jsdelivr.net/jquery.gray/1.3.4/jquery.gray.min.js
+//cdn.jsdelivr.net/jquery.gray/1.3.5/gray.min.css
+//cdn.jsdelivr.net/jquery.gray/1.3.5/jquery.gray.min.js
 ```
 
 Or you can just [download](https://github.com/karlhorky/gray/archive/gh-pages.zip) it.
@@ -85,11 +85,12 @@ The ```jquery.gray``` plugin uses the ```Modernizr._prefixes```, ```css-filters`
 Changelog
 ---------
 
-* v1.3.4: don't override existing modernizr
-* v1.3.3: update minified js to match source
-* v1.3.2: remove grayscale on hover in ie6-9 (fade option), use same svg filter in polyfill as in css
-* v1.3.1: bugfix for empty gray class name
-* v1.3.0: rename fade class to grayscale-fade to resolve conflict with bootstrap
+* v1.3.5: Declare variables to fix error in strict mode
+* v1.3.4: Don't override existing modernizr
+* v1.3.3: Update minified js to match source
+* v1.3.2: Remove grayscale on hover in ie6-9 (fade option), use same svg filter in polyfill as in css
+* v1.3.1: Bugfix for empty gray class name
+* v1.3.0: Rename fade class to grayscale-fade to resolve conflict with bootstrap
 * v1.2.0: IE shim: Copy styles from element to replacement element
 * v1.1.1: Improve documentation and demo
 * v1.1.0: Support for background images with basic background-size and background-position

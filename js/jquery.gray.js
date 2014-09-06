@@ -14,6 +14,9 @@
       };
 
   function Plugin (element, options) {
+    var classes,
+        fadeClass;
+
     options = options || {};
 
     classes = options.classes || {};
@@ -30,6 +33,8 @@
   Plugin.prototype = {
 
     init: function () {
+      var element;
+
       if (!Modernizr.cssfilters &&
         Modernizr.inlinesvg &&
         Modernizr.svgfilters
