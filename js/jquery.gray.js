@@ -184,8 +184,9 @@
       return params;
     },
 
-    setFadeStyles: function(styles, url) {
+    setFadeStyles: function(styles, url, width, height) {
       styles['background-image'] = 'url("' + url + '")';
+      styles['background-size'] = width + 'px ' + height + 'px';
       delete styles['filter'];
 
       return styles;
@@ -219,7 +220,7 @@
         params.styles['overflow-y'] = 'hidden';
 
       if (this.settings.fade) {
-        params.styles = this.setFadeStyles(params.styles, params.svg.url);
+        params.styles = this.setFadeStyles(params.styles, params.svg.url, params.svg.width, params.svg.height);
       }
 
       // TODO: Should this really set all params or should we set only unique ones by comparing to a control element?
