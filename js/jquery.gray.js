@@ -210,7 +210,7 @@
                 '<feColorMatrix type="matrix" values="0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0" />' +
               '</filter>' +
             '</defs>' +
-            '<image filter="url(&quot;#gray&quot;)" x="0" y="0" width="'+params.svg.width+'" height="'+params.svg.height+'" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="'+params.svg.url+'" />' +
+            '<image filter="url(&quot;#gray&quot;)" x="0" y="0" width="'+params.svg.width+'" height="'+params.svg.height+'" preserveAspectRatio="none" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="'+params.svg.url+'" />' +
           '</svg>' +
         '</div>');
 
