@@ -99,8 +99,9 @@ Changelog
 TODO
 ----
 
-* background-size: cover, background-size: contain
-* better JavaScript templating for SVG
+* background-size: cover
+* background-size: contain
+* better templating for SVG markup
 * example for [fading to gray instead of color](https://github.com/karlhorky/gray/issues/6)
 
 License
