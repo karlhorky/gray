@@ -85,6 +85,7 @@ The ```jquery.gray``` plugin uses the ```Modernizr._prefixes```, ```css-filters`
 Changelog
 ---------
 
+* v1.3.6: Fix image size with resized img tag and grayscale-fade in polyfill
 * v1.3.5: Declare variables to fix error in strict mode
 * v1.3.4: Don't override existing modernizr
 * v1.3.3: Update minified js to match source
