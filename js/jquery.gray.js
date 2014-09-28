@@ -184,8 +184,9 @@
       return params;
     },
 
-    setFadeStyles: function(styles, url) {
+    setFadeStyles: function(styles, url, width, height) {
       styles['background-image'] = 'url("' + url + '")';
+      styles['background-size'] = width + 'px ' + height + 'px';
       delete styles['filter'];
 
       return styles;
@@ -209,7 +210,7 @@
                 '<feColorMatrix type="matrix" values="0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0" />' +
               '</filter>' +
             '</defs>' +
-            '<image filter="url(&quot;#gray&quot;)" x="0" y="0" width="'+params.svg.width+'" height="'+params.svg.height+'" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="'+params.svg.url+'" />' +
+            '<image filter="url(&quot;#gray&quot;)" x="0" y="0" width="'+params.svg.width+'" height="'+params.svg.height+'" preserveAspectRatio="none" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="'+params.svg.url+'" />' +
           '</svg>' +
         '</div>');
 
@@ -219,7 +220,7 @@
         params.styles['overflow-y'] = 'hidden';
 
       if (this.settings.fade) {
-        params.styles = this.setFadeStyles(params.styles, params.svg.url);
+        params.styles = this.setFadeStyles(params.styles, params.svg.url, params.svg.width, params.svg.height);
       }
 
       // TODO: Should this really set all params or should we set only unique ones by comparing to a control element?
