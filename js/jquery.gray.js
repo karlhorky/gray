@@ -1,4 +1,4 @@
-/*! Gray v1.4.0 (https://github.com/karlhorky/gray) | MIT */
+/*! Gray v1.4.1 (https://github.com/karlhorky/gray) | MIT */
 /*! Modernizr 2.8.3 (Custom Build) | MIT & BSD */
 /* Build: http://modernizr.com/download/#-inlinesvg-prefixes-css_filters-svg_filters
  */
@@ -30,7 +30,7 @@
     this.init();
   }
 
-  Plugin.prototype = {
+  $.extend(Plugin.prototype, {
 
     init: function () {
       var element;
@@ -47,6 +47,8 @@
       }
     },
 
+    // TODO: Test a freshly made element (modernizr feature test?)
+    // instead of testing the active element (fragile)
     cssFilterDeprecated: function(element) {
       return element.css('filter') === 'none';
     },
@@ -196,6 +198,16 @@
       return styles;
     },
 
+    // TODO: Run this outside of the plugin so that it's not run
+    // on every element
+    addSVGFilterOnce: function() {
+      $body = $('body');
+      if (!$body.data('plugin_' + pluginName + '_has_filter')) {
+        $body.data('plugin_' + pluginName + '_has_filter', 'true')
+          .append('<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute"><defs><filter id="gray"><feColorMatrix type="matrix" values="0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0"></feColorMatrix></filter></defs></svg>');
+      }
+    },
+
     switchImage: function(element) {
       var params,
           classes,
@@ -207,12 +219,7 @@
 
       template = $(
         '<div class="grayscale grayscale-replaced ' + classes + '">' +
-          '<svg xmlns="http://www.w3.org/2000/svg" id="svgroot" viewBox="0 0 ' + params.svg.width + ' ' + params.svg.height + '" width="' + params.svg.width + '" height="' + params.svg.height + '" style="' + params.svg.offset + '">' +
-            '<defs>' +
-              '<filter id="gray">' +
-                '<feColorMatrix type="matrix" values="0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0" />' +
-              '</filter>' +
-            '</defs>' +
+          '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ' + params.svg.width + ' ' + params.svg.height + '" width="' + params.svg.width + '" height="' + params.svg.height + '" style="' + params.svg.offset + '">' +
             '<image filter="url(&quot;#gray&quot;)" x="0" y="0" width="' + params.svg.width + '" height="' + params.svg.height + '" preserveAspectRatio="none" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="' + params.svg.url + '" />' +
           '</svg>' +
         '</div>');
@@ -222,9 +229,10 @@
       // TODO: Should this really set all params or should we set only unique ones by comparing to a control element?
       template.css(params.styles);
 
+      this.addSVGFilterOnce();
       element.replaceWith(template);
     }
-  };
+  });
 
   $.fn[pluginName] = function (options) {
     this.each(function() {

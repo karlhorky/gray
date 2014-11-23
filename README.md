@@ -93,6 +93,7 @@ The ```jquery.gray``` plugin uses the ```Modernizr._prefixes```, ```css-filters`
 Changelog
 ---------
 
+* v1.4.1: Fix bug with `display: none` on parents
 * v1.4.0: Add support for programmatic toggling of grayscale
 * v1.3.6: Fix image size with resized img tag and grayscale-fade in polyfill
 * v1.3.5: Declare variables to fix error in strict mode
