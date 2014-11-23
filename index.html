@@ -11,25 +11,211 @@
   <link rel="stylesheet" href="css/gray.css">
 </head>
 <body>
-  <div style="display: none">
-    <div class="grayscale grayscale-fade" style="
-      display:inline-block;
-      background:no-repeat url(https://res.cloudinary.com/moozen/image/upload/v1406718817/sawyer_rjofsn.jpg);
-      background-size:165px 165px;
-      width:165px;
-      height:165px;"></div>
-</div>
 
-<div>
-    <div class="grayscale grayscale-fade" style="
-      display:inline-block;
-      background:no-repeat url(https://res.cloudinary.com/moozen/image/upload/v1406718817/sawyer_rjofsn.jpg);
-      background-size:165px 165px;
-      width:165px;
-      height:165px;"></div>
-</div>
+  <div class="container">
+    <h1>Gray <small>by Karl Horky</small></h1>
 
-<div style="align-content: stretch; align-items: stretch; align-self: stretch; animation: 0s cubic-bezier(0.25, 0.1, 0.25, 1) 0s normal none 1 running none; backface-visibility: visible; background: url(&quot;https://res.cloudinary.com/moozen/image/upload/v1406718817/sawyer_rjofsn.jpg&quot;) no-repeat scroll 0% 0% / 165px 165px transparent; background-blend-mode: normal; border: 0px none rgb(0, 0, 0); border-radius: 0px; border-collapse: separate; border-spacing: 0px; bottom: auto; box-decoration-break: slice; box-shadow: none; box-sizing: border-box; caption-side: top; clear: none; clip: auto; color: rgb(0, 0, 0); content: none; counter-increment: none; counter-reset: none; cursor: auto; direction: ltr; display: inline-block; empty-cells: show; flex: 0 1 auto; flex-flow: row nowrap; float: none; font: 400 16px/23px &quot;Open Sans&quot;,sans-serif; height: 165px; image-orientation: 0deg; ime-mode: auto; justify-content: flex-start; left: auto; letter-spacing: normal; list-style: outside none disc; margin: 0px; marker-offset: auto; max-height: none; max-width: none; min-height: 0px; min-width: 0px; mix-blend-mode: normal; opacity: 1; order: 0; outline: 0px none rgb(0, 0, 0); outline-offset: 0px; overflow: hidden; padding: 0px; page-break-after: auto; page-break-before: auto; page-break-inside: auto; perspective: none; perspective-origin: 82.5px 82.5px; pointer-events: auto; position: static; quotes: &quot;“&quot; &quot;”&quot; &quot;‘&quot; &quot;’&quot;; resize: none; right: auto; table-layout: auto; text-align: center; -moz-text-decoration-color: rgb(0, 0, 0); -moz-text-decoration-line: none; -moz-text-decoration-style: solid; text-indent: 0px; text-overflow: clip; text-shadow: none; text-transform: none; top: auto; transform: none; transform-origin: 82.5px 82.5px 0px; transform-style: flat; transition: all 0s cubic-bezier(0.25, 0.1, 0.25, 1) 0s; unicode-bidi: -moz-isolate; vertical-align: baseline; visibility: visible; white-space: normal; width: 165px; word-break: normal; word-spacing: 0px; word-wrap: normal; z-index: auto; -moz-appearance: none; -moz-binding: none; -moz-box-align: stretch; -moz-box-direction: normal; -moz-box-flex: 0; -moz-box-ordinal-group: 1; -moz-box-orient: horizontal; -moz-box-pack: start; -moz-columns: auto auto; -moz-column-fill: balance; -moz-column-gap: 16px; -moz-column-rule: 0px none rgb(0, 0, 0); -moz-float-edge: content-box; -moz-force-broken-image-icon: 0; -moz-hyphens: manual; -moz-image-region: auto; -moz-orient: auto; -moz-outline-radius: 0px; -moz-stack-sizing: stretch-to-fit; -moz-tab-size: 8; -moz-text-align-last: auto; -moz-text-size-adjust: auto; -moz-user-focus: none; -moz-user-input: auto; -moz-user-modify: read-only; -moz-user-select: auto; -moz-window-shadow: default; clip-path: none; clip-rule: nonzero; color-interpolation: srgb; color-interpolation-filters: linearrgb; dominant-baseline: auto; fill: rgb(0, 0, 0); fill-opacity: 1; fill-rule: nonzero; flood-color: rgb(0, 0, 0); flood-opacity: 1; image-rendering: auto; lighting-color: rgb(255, 255, 255); marker: none; mask: none; paint-order: normal; shape-rendering: auto; stop-color: rgb(0, 0, 0); stop-opacity: 1; stroke: none; stroke-dasharray: none; stroke-dashoffset: 0px; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-opacity: 1; stroke-width: 1px; text-anchor: start; text-rendering: auto; vector-effect: none;" class="grayscale grayscale-replaced grayscale-fade"><svg xmlns="http://www.w3.org/2000/svg" id="svgroot" viewBox="0 0 165 165" width="165" height="165" style="margin: 0% 0 0 0%"><defs><filter id="gray"><feColorMatrix type="matrix" values="0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0"></feColorMatrix></filter></defs><image filter="url(&quot;#gray&quot;)" x="0" y="0" width="165" height="165" preserveAspectRatio="none" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://res.cloudinary.com/moozen/image/upload/v1406718817/sawyer_rjofsn.jpg"></image></svg></div>
+    <p>Make an image gray in all browsers.</p>
+
+    <div class="row">
+      <div class="col-half">
+        <h2>Color</h2>
+      </div>
+      <div class="col-half">
+        <h2>Gray</h2>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <h3>&lt;img&gt; tag</h3>
+
+      <div class="col-half" data-label="Color">
+        <img src="img/color.jpg">
+      </div>
+      <div class="col-half" data-label="Gray">
+        <img src="img/color.jpg" class="grayscale">
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <pre><code>&lt;img src="img/color.jpg" class="grayscale"&gt;</code></pre>
+      </div>
+    </div>
+
+    <div class="row">
+      <h3>&lt;img&gt; tag with transition</h3>
+
+      <div class="col-half" data-label="Color">
+        <img src="img/color.jpg">
+      </div>
+      <div class="col-half" data-label="Gray">
+        <img src="img/color.jpg" class="grayscale grayscale-fade">
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <pre><code>&lt;img src="img/color.jpg" class="grayscale grayscale-fade"&gt;</code></pre>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <h3>&lt;img&gt; tag with styles</h3>
+
+      <div class="col-half" data-label="Color">
+        <img src="img/color.jpg" style="
+          position: absolute;
+          top     : 0;
+          left    : 50%;
+          margin  : 0 0 0 -90px;
+        ">
+      </div>
+      <div class="col-half" data-label="Gray">
+        <img src="img/color.jpg" class="grayscale" style="
+          position: absolute;
+          top     : 0;
+          left    : 50%;
+          margin  : 0 0 0 -90px;
+        ">
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <pre><code>&lt;img src="img/color.jpg" class="grayscale" style="
+  position: absolute;
+  top     : 0;
+  left    : 50%;
+  margin  : 0 0 0 -90px;
+"&gt;</code></pre>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <h3>CSS background</h3>
+
+      <div class="col-half" data-label="Color">
+        <div style="
+        background-image: url(img/color.jpg);
+        display         : inline-block;
+        width           : 180px;
+        height          : 72px;
+        "></div>
+      </div>
+      <div class="col-half" data-label="Gray">
+        <div style="
+        background-image: url(img/color.jpg);
+        display         : inline-block;
+        width           : 180px;
+        height          : 72px;
+        " class="grayscale"></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <pre><code>&lt;div style="
+  background-image: url(img/color.jpg);
+  display         : inline-block;
+  width           : 180px;
+  height          : 72px;
+" class="grayscale"&gt;&lt;/div&gt;</code></pre>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <h3>CSS sprite background</h3>
+
+      <div class="col-half" data-label="Color">
+        <div style="
+        background-image   : url(img/color-sprite.jpg);
+        background-position: -180px 0;
+        display            : inline-block;
+        width              : 180px;
+        height             : 72px;
+        "></div>
+      </div>
+      <div class="col-half" data-label="Gray">
+        <div style="
+        background-image   : url(img/color-sprite.jpg);
+        background-position: -180px 0;
+        display            : inline-block;
+        width              : 180px;
+        height             : 72px;
+        " class="grayscale"></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <pre><code>&lt;div style="
+  background-image   : url(img/color-sprite.jpg);
+  background-position: -180px 0;
+  display            : inline-block;
+  width              : 180px;
+  height             : 72px;
+" class="grayscale"&gt;&lt;/div&gt;</code></pre>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <h3>CSS sprite background with background-size</h3>
+
+      <div class="col-half" data-label="Color">
+        <div style="
+        background-image   : url(img/color-sprite-lg.jpg);
+        background-size    : auto 72px;
+        background-position: -180px 0;
+        display            : inline-block;
+        width              : 180px;
+        height             : 72px;
+        "></div>
+      </div>
+      <div class="col-half" data-label="Gray">
+        <div style="
+        background-image   : url(img/color-sprite-lg.jpg);
+        background-size    : auto 72px;
+        background-position: -180px 0;
+        display            : inline-block;
+        width              : 180px;
+        height             : 72px;
+        " class="grayscale"></div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <pre><code>&lt;div style="
+  background-image   : url(img/color-sprite-lg.jpg);
+  background-size    : auto 72px;
+  background-position: -180px 0;
+  display            : inline-block;
+  width              : 180px;
+  height             : 72px;
+" class="grayscale"&gt;&lt;/div&gt;</code></pre>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <h3>Toggling Grayscale</h3>
+      <button onclick="$('.grayscale').toggleClass('grayscale-off')">Toggle Grayscale</button>
+    </div>
+
+    <div class="row">
+      <div>
+        <pre><code>$('.grayscale').toggleClass('grayscale-off');</code></pre>
+      </div>
+    </div>
+  </div>
+
+  <a href="https://github.com/karlhorky/gray"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
 
   <!--[if lt IE 9]>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
