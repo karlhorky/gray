@@ -13,7 +13,7 @@
 <body>
 
   <div class="container">
-    <h1>Gray <span>by Karl Horky</span></h1>
+    <h1>Gray <small>by Karl Horky</small></h1>
 
     <p>Make an image gray in all browsers.</p>
 
@@ -26,8 +26,9 @@
       </div>
     </div>
 
+
     <div class="row">
-      <h3><span>&lt;img&gt; tag</span></h3>
+      <h3>&lt;img&gt; tag</h3>
 
       <div class="col-half" data-label="Color">
         <img src="img/color.jpg">
@@ -44,7 +45,7 @@
     </div>
 
     <div class="row">
-      <h3><span>&lt;img&gt; tag with transition</span></h3>
+      <h3>&lt;img&gt; tag with transition</h3>
 
       <div class="col-half" data-label="Color">
         <img src="img/color.jpg">
@@ -60,23 +61,24 @@
       </div>
     </div>
 
+
     <div class="row">
-      <h3><span>&lt;img&gt; tag with styles</span></h3>
+      <h3>&lt;img&gt; tag with styles</h3>
 
       <div class="col-half" data-label="Color">
         <img src="img/color.jpg" style="
-        position: absolute;
-        top     : 0;
-        left    : 50%;
-        margin  : 0 0 0 -90px;
+          position: absolute;
+          top     : 0;
+          left    : 50%;
+          margin  : 0 0 0 -90px;
         ">
       </div>
       <div class="col-half" data-label="Gray">
         <img src="img/color.jpg" class="grayscale" style="
-        position: absolute;
-        top     : 0;
-        left    : 50%;
-        margin  : 0 0 0 -90px;
+          position: absolute;
+          top     : 0;
+          left    : 50%;
+          margin  : 0 0 0 -90px;
         ">
       </div>
     </div>
@@ -84,16 +86,17 @@
     <div class="row">
       <div>
         <pre><code>&lt;img src="img/color.jpg" class="grayscale" style="
-          position: absolute;
-          top     : 0;
-          left    : 50%;
-          margin  : 0 0 0 -90px;
-          "&gt;</code></pre>
+  position: absolute;
+  top     : 0;
+  left    : 50%;
+  margin  : 0 0 0 -90px;
+"&gt;</code></pre>
       </div>
     </div>
 
+
     <div class="row">
-      <h3><span>CSS background</span></h3>
+      <h3>CSS background</h3>
 
       <div class="col-half" data-label="Color">
         <div style="
@@ -116,16 +119,17 @@
     <div class="row">
       <div>
         <pre><code>&lt;div style="
-          background-image: url(img/color.jpg);
-          display         : inline-block;
-          width           : 180px;
-          height          : 72px;
-          " class="grayscale"&gt;&lt;/div&gt;</code></pre>
+  background-image: url(img/color.jpg);
+  display         : inline-block;
+  width           : 180px;
+  height          : 72px;
+" class="grayscale"&gt;&lt;/div&gt;</code></pre>
       </div>
     </div>
 
+
     <div class="row">
-      <h3><span>CSS sprite background</span></h3>
+      <h3>CSS sprite background</h3>
 
       <div class="col-half" data-label="Color">
         <div style="
@@ -150,17 +154,18 @@
     <div class="row">
       <div>
         <pre><code>&lt;div style="
-          background-image   : url(img/color-sprite.jpg);
-          background-position: -180px 0;
-          display            : inline-block;
-          width              : 180px;
-          height             : 72px;
-          " class="grayscale"&gt;&lt;/div&gt;</code></pre>
+  background-image   : url(img/color-sprite.jpg);
+  background-position: -180px 0;
+  display            : inline-block;
+  width              : 180px;
+  height             : 72px;
+" class="grayscale"&gt;&lt;/div&gt;</code></pre>
       </div>
     </div>
 
+
     <div class="row">
-      <h3><span>CSS sprite background with background-size</span></h3>
+      <h3>CSS sprite background with background-size</h3>
 
       <div class="col-half" data-label="Color">
         <div style="
@@ -184,17 +189,28 @@
       </div>
     </div>
 
-
     <div class="row">
       <div>
         <pre><code>&lt;div style="
-          background-image   : url(img/color-sprite-lg.jpg);
-          background-size    : auto 72px;
-          background-position: -180px 0;
-          display            : inline-block;
-          width              : 180px;
-          height             : 72px;
-          " class="grayscale"&gt;&lt;/div&gt;</code></pre>
+  background-image   : url(img/color-sprite-lg.jpg);
+  background-size    : auto 72px;
+  background-position: -180px 0;
+  display            : inline-block;
+  width              : 180px;
+  height             : 72px;
+" class="grayscale"&gt;&lt;/div&gt;</code></pre>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <h3>Toggling Grayscale</h3>
+      <button onclick="$('.grayscale').toggleClass('grayscale-off')">Toggle Grayscale</button>
+    </div>
+
+    <div class="row">
+      <div>
+        <pre><code>$('.grayscale').toggleClass('grayscale-off');</code></pre>
       </div>
     </div>
   </div>

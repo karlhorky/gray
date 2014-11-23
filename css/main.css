@@ -12,8 +12,8 @@ h1 {
   color: #bbb;
 }
 
-h1 span {
-  font-size: 20px;
+h1 small {
+  font-size: 60%;
 }
 
 h3 {
@@ -21,10 +21,6 @@ h3 {
   text-align: left;
   background: #cfcfcf;
   margin: 20px 0 25px;
-}
-
-h3 span {
-  display: inline-block;
   padding: 8px 10px;
   color: #fff;
 }
@@ -75,7 +71,7 @@ code {
 }
 
 @media (max-width: 480px) {
-  h1 span {
+  h1 small {
     display: block;
   }
 

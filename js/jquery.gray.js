@@ -184,7 +184,11 @@
       return params;
     },
 
-    setFadeStyles: function(styles, url, width, height) {
+    setStyles: function(styles, url, width, height) {
+      styles['display']  = 'inline-block';
+      styles['overflow'] =
+        styles['overflow-x'] =
+        styles['overflow-y'] = 'hidden';
       styles['background-image'] = 'url("' + url + '")';
       styles['background-size'] = width + 'px ' + height + 'px';
       delete styles['filter'];
@@ -201,27 +205,19 @@
 
       classes = this.settings.fade ? this.settings.classes.fade : '';
 
-      // TODO: use templating or DOM elements here
       template = $(
-        '<div class="grayscale-replaced ' + classes + '">' +
-          '<svg xmlns="http://www.w3.org/2000/svg" id="svgroot" viewBox="0 0 '+params.svg.width+' '+params.svg.height+'" width="'+params.svg.width+'" height="'+params.svg.height+'" style="'+params.svg.offset+'">' +
+        '<div class="grayscale grayscale-replaced ' + classes + '">' +
+          '<svg xmlns="http://www.w3.org/2000/svg" id="svgroot" viewBox="0 0 ' + params.svg.width + ' ' + params.svg.height + '" width="' + params.svg.width + '" height="' + params.svg.height + '" style="' + params.svg.offset + '">' +
             '<defs>' +
               '<filter id="gray">' +
                 '<feColorMatrix type="matrix" values="0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0" />' +
               '</filter>' +
             '</defs>' +
-            '<image filter="url(&quot;#gray&quot;)" x="0" y="0" width="'+params.svg.width+'" height="'+params.svg.height+'" preserveAspectRatio="none" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="'+params.svg.url+'" />' +
+            '<image filter="url(&quot;#gray&quot;)" x="0" y="0" width="' + params.svg.width + '" height="' + params.svg.height + '" preserveAspectRatio="none" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="' + params.svg.url + '" />' +
           '</svg>' +
         '</div>');
 
-      params.styles['display']  = 'inline-block';
-      params.styles['overflow'] =
-        params.styles['overflow-x'] =
-        params.styles['overflow-y'] = 'hidden';
-
-      if (this.settings.fade) {
-        params.styles = this.setFadeStyles(params.styles, params.svg.url, params.svg.width, params.svg.height);
-      }
+      params.styles = this.setStyles(params.styles, params.svg.url, params.svg.width, params.svg.height);
 
       // TODO: Should this really set all params or should we set only unique ones by comparing to a control element?
       template.css(params.styles);
@@ -240,7 +236,7 @@
   };
 
   $(window).on('load', function() {
-    $('.grayscale')[pluginName]();
+    $('.grayscale:not(.grayscale-replaced)')[pluginName]();
   });
 
 })(jQuery, window, document);

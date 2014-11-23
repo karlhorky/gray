@@ -26,8 +26,8 @@ bower install --save gray
 Or use the CDN links:
 
 ```
-//cdn.jsdelivr.net/jquery.gray/1.3.6/gray.min.css
-//cdn.jsdelivr.net/jquery.gray/1.3.6/jquery.gray.min.js
+//cdn.jsdelivr.net/jquery.gray/1.4.0/gray.min.css
+//cdn.jsdelivr.net/jquery.gray/1.4.0/jquery.gray.min.js
 ```
 
 Or you can just [download](https://github.com/karlhorky/gray/archive/gh-pages.zip) it.
@@ -42,10 +42,18 @@ How to Use
     <script src="/js/jquery.gray.min.js"></script>
     ```
 
-    The plugin automatically initializes for all elements with a class of ```grayscale```. The plugin can also be called manually with:
+    The plugin automatically initializes for all elements with a class of ```grayscale```.
+
+    The plugin can also be called manually with:
 
     ```javascript
     $('.my-grayscale-class').gray();
+    ```
+
+    The effect can be toggled with the `grayscale-off` class:
+
+    ```javascript
+    $('.grayscale').toggleClass('grayscale-off');
     ```
 
 3. Add your image with a class of ```grayscale```.
@@ -78,13 +86,14 @@ How to Use
 How it Works
 ------------
 
-In [supporting browsers](http://caniuse.com/#feat=css-filters), the styles in ```gray.css``` will use CSS filters to turn the image gray.
+In [browsers that support css filters](http://caniuse.com/#feat=css-filters), the styles in ```gray.css``` will use CSS filters to turn the image gray.
 
 The ```jquery.gray``` plugin uses the ```Modernizr._prefixes```, ```css-filters```, ```Inline SVG``` and ```svg-filters``` feature detects from Modernizr to determine browser support. If a browser supports inline SVG and SVG filters but not CSS filters, the plugin replaces the elements with SVG elements with filters.
 
 Changelog
 ---------
 
+* v1.4.0: Add support for programmatic toggling of grayscale
 * v1.3.6: Fix image size with resized img tag and grayscale-fade in polyfill
 * v1.3.5: Declare variables to fix error in strict mode
 * v1.3.4: Don't override existing modernizr
@@ -102,8 +111,6 @@ TODO
 
 * background-size: cover
 * background-size: contain
-* better templating for SVG markup
-* example for [fading to gray instead of color](https://github.com/karlhorky/gray/issues/6)
 
 License
 -------
