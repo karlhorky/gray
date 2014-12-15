@@ -1,7 +1,9 @@
 gray
 ====
 
-Make an image gray in all browsers. [Demo](http://work.karlhorky.com/gray/).
+Make an image gray in all browsers.
+
+#### [Demo](http://work.karlhorky.com/gray/)
 
 Support:
 
