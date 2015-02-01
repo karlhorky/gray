@@ -1,6 +1,8 @@
 gray
 ====
 
+![Bower version](https://img.shields.io/bower/v/gray.svg?style=flat)
+
 Make an image gray in all browsers.
 
 #### [Demo](http://work.karlhorky.com/gray/)
