@@ -204,7 +204,7 @@
       $body = $('body');
       if (!$body.data('plugin_' + pluginName + '_has_filter')) {
         $body.data('plugin_' + pluginName + '_has_filter', 'true')
-          .append('<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute"><defs><filter id="gray"><feColorMatrix type="matrix" values="0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0"></feColorMatrix></filter></defs></svg>');
+          .append('<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute"><defs><filter id="gray"><feColorMatrix type="saturate" values="0"/></filter></defs></svg>');
       }
     },
 
