@@ -1,4 +1,4 @@
-/*! Gray v1.4.1 (https://github.com/karlhorky/gray) | MIT */
+/*! Gray v1.4.2 (https://github.com/karlhorky/gray) | MIT */
 /*! Modernizr 2.8.3 (Custom Build) | MIT & BSD */
 /* Build: http://modernizr.com/download/#-inlinesvg-prefixes-css_filters-svg_filters
  */

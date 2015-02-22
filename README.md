@@ -30,8 +30,8 @@ bower install --save gray
 Or use the CDN links:
 
 ```
-//cdn.jsdelivr.net/jquery.gray/1.4.1/gray.min.css
-//cdn.jsdelivr.net/jquery.gray/1.4.1/jquery.gray.min.js
+//cdn.jsdelivr.net/jquery.gray/1.4.2/gray.min.css
+//cdn.jsdelivr.net/jquery.gray/1.4.2/jquery.gray.min.js
 ```
 
 Or you can just [download](https://github.com/karlhorky/gray/archive/gh-pages.zip) it.
@@ -97,6 +97,7 @@ The ```jquery.gray``` plugin uses the ```Modernizr._prefixes```, ```css-filters`
 Changelog
 ---------
 
+- v1.4.2: Add Firefox 35+ support, normalize cross-browser rendering
 - v1.4.1: Fix bug with `display: none` on parents
 - v1.4.0: Add support for programmatic toggling of grayscale
 - v1.3.6: Fix image size with resized img tag and grayscale-fade in polyfill
