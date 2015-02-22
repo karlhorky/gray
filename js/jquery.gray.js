@@ -97,8 +97,8 @@
           y,
           margin;
 
-      x = backgroundPosition.match(/^(-?\d+\S+)/)[0]
-      y = backgroundPosition.match(/\s(-?\d+\S+)$/)[0]
+      x = backgroundPosition.match(/^(-?\d+\S+)/)[0];
+      y = backgroundPosition.match(/\s(-?\d+\S+)$/)[0];
 
       margin = 'margin:' + y + ' 0 0 ' + x;
 
@@ -134,7 +134,7 @@
         size = {
           width: w,
           height: h
-        }
+        };
       } else {
 
         size = {
@@ -172,7 +172,7 @@
           position;
 
       url       = this.extractUrl(element.css('background-image'));
-      bgSize    = this.getBgSize(url, element.css('background-size'))
+      bgSize    = this.getBgSize(url, element.css('background-size'));
       offset    = this.positionToNegativeMargin(element.css('background-position'));
 
       params.styles = this.getComputedStyle(element[0]);
@@ -187,13 +187,13 @@
     },
 
     setStyles: function(styles, url, width, height) {
-      styles['display']  = 'inline-block';
-      styles['overflow'] =
+      styles.display  = 'inline-block';
+      styles.overflow =
         styles['overflow-x'] =
         styles['overflow-y'] = 'hidden';
       styles['background-image'] = 'url("' + url + '")';
       styles['background-size'] = width + 'px ' + height + 'px';
-      delete styles['filter'];
+      delete styles.filter;
 
       return styles;
     },
