@@ -78,6 +78,8 @@ How to Use
       height             : 72px;
     " class="grayscale"></div>
     ```
+    
+    Non-numeric background-size (cover, contain, ...) and background-position (center, ...) are not currently supported (pull requests welcome!).
 
 4. (Optional) Add class of ```grayscale-fade``` if you want transitioning from grayscale back to color on hover
 
