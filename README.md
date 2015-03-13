@@ -114,12 +114,6 @@ Changelog
 - v1.1.0: Support for background images with basic background-size and background-position
 - v1.0.0: First basic version with support for &lt;img&gt; tags
 
-TODO
-----
-
-- background-size: cover
-- background-size: contain
-
 License
 -------
 
