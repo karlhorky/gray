@@ -10,7 +10,7 @@ Make an image gray in all browsers.
 Support:
 
 - IE 6-9
-- IE 10-11 (inline SVG via JavaScript)
+- IE 10-11, Edge 20 (inline SVG via JavaScript)
 - Firefox 10+, Firefox on Android
 - Chrome 19+, Chrome for Android 25+
 - Android Browser 4.4+
