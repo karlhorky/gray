@@ -54,15 +54,7 @@
     },
 
     elementType: function(element) {
-      var type;
-
-      if (element.prop('tagName') === 'IMG') {
-        type = 'Img';
-      } else {
-        type = 'Bg';
-      }
-
-      return type;
+      return element.prop('tagName') === 'IMG' ? 'Img' : 'Bg';
     },
 
     getComputedStyle: function(element) {
