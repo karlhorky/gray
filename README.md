@@ -30,8 +30,8 @@ bower install --save gray
 Or use the CDN links:
 
 ```
-//cdn.jsdelivr.net/jquery.gray/1.4.2/gray.min.css
-//cdn.jsdelivr.net/jquery.gray/1.4.2/jquery.gray.min.js
+//cdn.jsdelivr.net/jquery.gray/1.4.3/gray.min.css
+//cdn.jsdelivr.net/jquery.gray/1.4.3/jquery.gray.min.js
 ```
 
 Or you can just [download](https://github.com/karlhorky/gray/archive/gh-pages.zip) it.
@@ -78,7 +78,7 @@ How to Use
       height             : 72px;
     " class="grayscale"></div>
     ```
-    
+
     Non-numeric background-size (cover, contain, ...) and background-position (center, ...) are not currently supported (pull requests welcome!).
 
 4. (Optional) Add class of ```grayscale-fade``` if you want transitioning from grayscale back to color on hover
@@ -99,6 +99,7 @@ The ```jquery.gray``` plugin uses the ```Modernizr._prefixes```, ```css-filters`
 Changelog
 ---------
 
+- v1.4.3: Fix bug with padding on img tag
 - v1.4.2: Add Firefox 35+ support, normalize cross-browser rendering
 - v1.4.1: Fix bug with `display: none` on parents
 - v1.4.0: Add support for programmatic toggling of grayscale
