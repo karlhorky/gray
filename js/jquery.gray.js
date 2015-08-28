@@ -1,4 +1,4 @@
-/*! Gray v1.4.2 (https://github.com/karlhorky/gray) | MIT */
+/*! Gray v1.4.3 https://github.com/karlhorky/gray) | MIT */
 /*! Modernizr 2.8.3 (Custom Build) | MIT & BSD */
 /* Build: http://modernizr.com/download/#-inlinesvg-prefixes-css_filters-svg_filters
  */
@@ -55,6 +55,10 @@
 
     elementType: function(element) {
       return element.prop('tagName') === 'IMG' ? 'Img' : 'Bg';
+    },
+
+    pxToNumber: function(pxString) {
+      return pxString.replace('px', '');
     },
 
     getComputedStyle: function(element) {
@@ -128,7 +132,6 @@
           height: h
         };
       } else {
-
         size = {
           width : img.width,
           height: img.height
@@ -148,10 +151,36 @@
 
       params.styles = this.getComputedStyle(element[0]);
 
+      var padding = {
+        top   : this.pxToNumber(params.styles['padding-top']),
+        right : this.pxToNumber(params.styles['padding-right']),
+        bottom: this.pxToNumber(params.styles['padding-bottom']),
+        left  : this.pxToNumber(params.styles['padding-left'])
+      };
+
+      var borderWidth = {
+        top   : this.pxToNumber(params.styles['border-top-width']),
+        right : this.pxToNumber(params.styles['border-right-width']),
+        bottom: this.pxToNumber(params.styles['border-bottom-width']),
+        left  : this.pxToNumber(params.styles['border-left-width'])
+      };
+
       params.svg = {
-        url   : element[0].src,
-        width : params.styles.width.replace('px', ''),
-        height: params.styles.height.replace('px', ''),
+        url        : element[0].src,
+        padding    : padding,
+        borderWidth: borderWidth,
+        width      :
+          this.pxToNumber(params.styles.width) -
+          padding.left -
+          padding.right -
+          borderWidth.left -
+          borderWidth.right,
+        height:
+          this.pxToNumber(params.styles.height) -
+          padding.top -
+          padding.bottom -
+          borderWidth.top -
+          borderWidth.bottom,
         offset: ''
       };
 
@@ -163,9 +192,9 @@
           url,
           position;
 
-      url       = this.extractUrl(element.css('background-image'));
-      bgSize    = this.getBgSize(url, element.css('background-size'));
-      offset    = this.positionToNegativeMargin(element.css('background-position'));
+      url    = this.extractUrl(element.css('background-image'));
+      bgSize = this.getBgSize(url, element.css('background-size'));
+      offset = this.positionToNegativeMargin(element.css('background-position'));
 
       params.styles = this.getComputedStyle(element[0]);
 
@@ -178,13 +207,15 @@
       return params;
     },
 
-    setStyles: function(styles, url, width, height) {
+    setStyles: function(styles, svg) {
       styles.display  = 'inline-block';
       styles.overflow =
         styles['overflow-x'] =
         styles['overflow-y'] = 'hidden';
-      styles['background-image'] = 'url("' + url + '")';
-      styles['background-size'] = width + 'px ' + height + 'px';
+      styles['background-image']    = 'url("' + svg.url + '")';
+      styles['background-size']     = svg.width + 'px ' + svg.height + 'px';
+      styles['background-repeat']   = 'no-repeat';
+      styles['background-position'] = svg.padding.left + 'px ' + svg.padding.top + 'px';
       delete styles.filter;
 
       return styles;
@@ -216,7 +247,7 @@
           '</svg>' +
         '</div>');
 
-      params.styles = this.setStyles(params.styles, params.svg.url, params.svg.width, params.svg.height);
+      params.styles = this.setStyles(params.styles, params.svg);
 
       // TODO: Should this really set all params or should we set only unique ones by comparing to a control element?
       template.css(params.styles);
