@@ -1,4 +1,4 @@
-/*! Gray v1.4.3 https://github.com/karlhorky/gray) | MIT */
+/*! Gray v1.4.4 https://github.com/karlhorky/gray) | MIT */
 /*! Modernizr 2.8.3 (Custom Build) | MIT & BSD */
 /* Build: http://modernizr.com/download/#-inlinesvg-prefixes-css_filters-svg_filters
  */
@@ -141,11 +141,6 @@
       return size;
     },
 
-    getParams: function(element) {
-      var type = this.elementType(element);
-      return this['get' + type + 'Params'](element);
-    },
-
     getImgParams: function(element) {
       var params = {};
 
@@ -207,15 +202,19 @@
       return params;
     },
 
-    setStyles: function(styles, svg) {
+    setStyles: function(type, styles, svg) {
       styles.display  = 'inline-block';
       styles.overflow =
         styles['overflow-x'] =
         styles['overflow-y'] = 'hidden';
       styles['background-image']    = 'url("' + svg.url + '")';
       styles['background-size']     = svg.width + 'px ' + svg.height + 'px';
-      styles['background-repeat']   = 'no-repeat';
-      styles['background-position'] = svg.padding.left + 'px ' + svg.padding.top + 'px';
+
+      if (type === 'Img') {
+        styles['background-repeat']   = 'no-repeat';
+        styles['background-position'] = svg.padding.left + 'px ' + svg.padding.top + 'px';
+      }
+
       delete styles.filter;
 
       return styles;
@@ -232,11 +231,13 @@
     },
 
     switchImage: function(element) {
-      var params,
+      var type,
+          params,
           classes,
           template;
 
-      params = this.getParams(element);
+      type   = this.elementType(element);
+      params = this['get' + type + 'Params'](element);
 
       classes = this.settings.fade ? this.settings.classes.fade : '';
 
@@ -247,7 +248,7 @@
           '</svg>' +
         '</div>');
 
-      params.styles = this.setStyles(params.styles, params.svg);
+      params.styles = this.setStyles(type, params.styles, params.svg);
 
       // TODO: Should this really set all params or should we set only unique ones by comparing to a control element?
       template.css(params.styles);
