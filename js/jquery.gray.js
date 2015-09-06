@@ -58,7 +58,7 @@
     },
 
     pxToNumber: function(pxString) {
-      return pxString.replace('px', '');
+      return parseInt(pxString.replace('px', ''));
     },
 
     getComputedStyle: function(element) {
@@ -160,21 +160,26 @@
         left  : this.pxToNumber(params.styles['border-left-width'])
       };
 
+      params.image = {
+        width : this.pxToNumber(params.styles.width),
+        height: this.pxToNumber(params.styles.height)
+      };
+
       params.svg = {
         url        : element[0].src,
         padding    : padding,
         borderWidth: borderWidth,
-        width      :
-          this.pxToNumber(params.styles.width) -
-          padding.left -
-          padding.right -
-          borderWidth.left -
+        width:
+          params.image.width +
+          padding.left +
+          padding.right +
+          borderWidth.left +
           borderWidth.right,
         height:
-          this.pxToNumber(params.styles.height) -
-          padding.top -
-          padding.bottom -
-          borderWidth.top -
+          params.image.height +
+          padding.top +
+          padding.bottom +
+          borderWidth.top +
           borderWidth.bottom,
         offset: ''
       };
@@ -199,20 +204,27 @@
         { offset: offset }
       );
 
+      params.image = {
+        width : params.svg.width,
+        height: params.svg.height
+      };
+
       return params;
     },
 
-    setStyles: function(type, styles, svg) {
+    setStyles: function(type, styles, svg, image) {
       styles.display  = 'inline-block';
       styles.overflow =
         styles['overflow-x'] =
         styles['overflow-y'] = 'hidden';
-      styles['background-image']    = 'url("' + svg.url + '")';
-      styles['background-size']     = svg.width + 'px ' + svg.height + 'px';
+      styles['background-image'] = 'url("' + svg.url + '")';
+      styles['background-size']  = image.width + 'px ' + image.height + 'px';
 
       if (type === 'Img') {
         styles['background-repeat']   = 'no-repeat';
         styles['background-position'] = svg.padding.left + 'px ' + svg.padding.top + 'px';
+        styles.width  = svg.width;
+        styles.height = svg.height;
       }
 
       delete styles.filter;
@@ -244,11 +256,11 @@
       template = $(
         '<div class="grayscale grayscale-replaced ' + classes + '">' +
           '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ' + params.svg.width + ' ' + params.svg.height + '" width="' + params.svg.width + '" height="' + params.svg.height + '" style="' + params.svg.offset + '">' +
-            '<image filter="url(&quot;#gray&quot;)" x="0" y="0" width="' + params.svg.width + '" height="' + params.svg.height + '" preserveAspectRatio="none" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="' + params.svg.url + '" />' +
+            '<image filter="url(&quot;#gray&quot;)" x="0" y="0" width="' + params.image.width + '" height="' + params.image.height + '" preserveAspectRatio="none" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="' + params.svg.url + '" />' +
           '</svg>' +
         '</div>');
 
-      params.styles = this.setStyles(type, params.styles, params.svg);
+      params.styles = this.setStyles(type, params.styles, params.svg, params.image);
 
       // TODO: Should this really set all params or should we set only unique ones by comparing to a control element?
       template.css(params.styles);
