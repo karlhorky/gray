@@ -28,8 +28,8 @@ bower install --save gray
 Or use the CDN links:
 
 ```
-//cdn.jsdelivr.net/jquery.gray/1.4.4/gray.min.css
-//cdn.jsdelivr.net/jquery.gray/1.4.4/jquery.gray.min.js
+//cdn.jsdelivr.net/jquery.gray/1.4.5/gray.min.css
+//cdn.jsdelivr.net/jquery.gray/1.4.5/jquery.gray.min.js
 ```
 
 Or you can just [download](https://github.com/karlhorky/gray/archive/gh-pages.zip) it.
@@ -106,6 +106,7 @@ The ```jquery.gray``` plugin uses the ```Modernizr._prefixes```, ```css-filters`
 
 ## Changelog
 
+- v1.4.5: Fix sizing of img tags with padding
 - v1.4.4: Fix bug with missing padding properties with background images
 - v1.4.3: Fix bug with padding on img tag
 - v1.4.2: Add Firefox 35+ support, normalize cross-browser rendering
