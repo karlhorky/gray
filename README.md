@@ -90,6 +90,14 @@ Or you can just [download](https://github.com/karlhorky/gray/archive/gh-pages.zi
 
 Non-numeric background-size (cover, contain, ...) and background-position (center, ...) are not currently supported.
 
+Colored borders will be also converted to grayscale in non-polyfill browsers. To also convert to grayscale in polyfill browsers, the class `grayscale-replaced` can be used:
+
+```css
+.grayscale-replaced {
+  border-color: #494949 !important;
+}
+```
+
 ## How it Works
 
 In [browsers that support css filters](http://caniuse.com/#feat=css-filters), the styles in ```gray.css``` will use CSS filters to turn the image gray.
