@@ -9,7 +9,7 @@ Make an image gray in all browsers.
 Support:
 
 - IE 6-9
-- IE 10-11, Edge 20 (with polyfill)
+- IE 10-11, Edge 12 (with polyfill)
 - Firefox 10+, Firefox on Android
 - Chrome 19+, Chrome for Android 25+
 - Android Browser 4.4+
