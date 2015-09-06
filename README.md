@@ -1,5 +1,4 @@
-gray
-====
+# gray
 
 ![Bower version](https://img.shields.io/bower/v/gray.svg?style=flat)
 
@@ -10,7 +9,7 @@ Make an image gray in all browsers.
 Support:
 
 - IE 6-9
-- IE 10-11, Edge 20 (inline SVG via JavaScript)
+- IE 10-11, Edge 20 (with polyfill)
 - Firefox 10+, Firefox on Android
 - Chrome 19+, Chrome for Android 25+
 - Android Browser 4.4+
@@ -18,8 +17,7 @@ Support:
 - Opera 15+, Opera Mobile 16+
 - BlackBerry Browser 10+
 
-Installation
-------------
+## Installation
 
 You can install with [Bower](http://bower.io):
 
@@ -36,8 +34,7 @@ Or use the CDN links:
 
 Or you can just [download](https://github.com/karlhorky/gray/archive/gh-pages.zip) it.
 
-How to Use
-----------
+## How to Use
 
 1. Add the CSS from [gray.css](https://github.com/karlhorky/gray/blob/gh-pages/css/gray.css).
 2. Add the plugin after jQuery at the bottom of the body.
@@ -89,15 +86,19 @@ How to Use
 
 5. Revel in your absolute and utter awesomeness.
 
-How it Works
-------------
+## Caveats
+
+Non-numeric background-size (cover, contain, ...) and background-position (center, ...) are not currently supported.
+
+Colored borders will be also converted to grayscale in non-polyfill browsers.
+
+## How it Works
 
 In [browsers that support css filters](http://caniuse.com/#feat=css-filters), the styles in ```gray.css``` will use CSS filters to turn the image gray.
 
 The ```jquery.gray``` plugin uses the ```Modernizr._prefixes```, ```css-filters```, ```Inline SVG``` and ```svg-filters``` feature detects from Modernizr to determine browser support. If a browser supports inline SVG and SVG filters but not CSS filters, the plugin replaces the elements with SVG elements with filters.
 
-Changelog
----------
+## Changelog
 
 - v1.4.4: Fix bug with missing padding properties with background images
 - v1.4.3: Fix bug with padding on img tag
@@ -116,7 +117,6 @@ Changelog
 - v1.1.0: Support for background images with basic background-size and background-position
 - v1.0.0: First basic version with support for &lt;img&gt; tags
 
-License
--------
+## License
 
 MIT &copy; Karl Horky
