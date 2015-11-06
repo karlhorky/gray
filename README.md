@@ -37,6 +37,9 @@ Or you can just [download](https://github.com/karlhorky/gray/archive/gh-pages.zi
 ## How to Use
 
 1. Add the CSS from [gray.css](https://github.com/karlhorky/gray/blob/gh-pages/css/gray.css).
+    
+    If you want to use your own CSS selector instead of `.grayscale`, edit or copy the CSS.
+
 2. Add the plugin after jQuery at the bottom of the body.
 
     ```html
