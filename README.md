@@ -8,8 +8,8 @@ Make an image gray in all browsers.
 
 Support:
 
-- IE 6-9, IE 10-11 (JS polyfill)
-- Edge 12 (JS polyfill), Edge 13
+- IE 6-11 (10 and 11 use polyfill)
+- Edge 12+ (12 uses polyfill)
 - Firefox 10+, Firefox on Android
 - Chrome 19+, Chrome for Android 25+
 - Android Browser 4.4+
