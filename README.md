@@ -1,6 +1,6 @@
 # gray
 
-![Bower version](https://img.shields.io/bower/v/gray.svg?style=flat)
+![Bower version](https://img.shields.io/bower/v/gray.svg?style=flat) ![npm version](https://img.shields.io/npm/v/jquery-gray.svg?style=flat)
 
 Make an image gray in all browsers.
 
@@ -19,7 +19,13 @@ Support:
 
 ## Installation
 
-You can install with [Bower](http://bower.io):
+You can install with [npm](https://www.npmjs.com/):
+
+```shell
+npm install --save jquery-gray
+```
+
+Or [Bower](http://bower.io):
 
 ```shell
 bower install --save gray
@@ -28,8 +34,8 @@ bower install --save gray
 Or use the CDN links:
 
 ```
-//cdn.jsdelivr.net/jquery.gray/1.4.5/gray.min.css
-//cdn.jsdelivr.net/jquery.gray/1.4.5/jquery.gray.min.js
+https://npmcdn.com/jquery-gray@1.4.5/css/gray.min.css
+https://npmcdn.com/jquery-gray@1.4.5/js/jquery.gray.min.js
 ```
 
 Or you can just [download](https://github.com/karlhorky/gray/archive/gh-pages.zip) it.
