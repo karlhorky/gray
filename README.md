@@ -97,7 +97,15 @@ Or you can just [download](https://github.com/karlhorky/gray/archive/gh-pages.zi
 
 ## Caveats
 
+### Non-numeric background-size and background-position
+
 Non-numeric background-size (cover, contain, ...) and background-position (center, ...) are not currently supported.
+
+### Non-visible elements will not be correctly initialized
+
+Calling the plugin on hidden images (or other images that cannot have their size calculated) will fail in polyfill browsers. Workarounds can be found in the discussions at [#57](https://github.com/karlhorky/gray/issues/57#issuecomment-193702953) and [#40](https://github.com/karlhorky/gray/issues/40#issuecomment-136187306).
+
+### Colored borders
 
 Colored borders will be also converted to grayscale in non-polyfill browsers. To also convert to grayscale in polyfill browsers, the class `grayscale-replaced` can be used:
 
