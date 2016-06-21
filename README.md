@@ -105,6 +105,10 @@ Non-numeric background-size (cover, contain, ...) and background-position (cente
 
 Calling the plugin on hidden images (or other images that cannot have their size calculated) will fail in polyfill browsers. Workarounds can be found in the discussions at [#57](https://github.com/karlhorky/gray/issues/57#issuecomment-193702953) and [#40](https://github.com/karlhorky/gray/issues/40#issuecomment-136187306).
 
+### Child elements removed in browsers without support for CSS filters
+
+Target elements with child elements will have those child elements removed in browsers without support for CSS filters. [#61](https://github.com/karlhorky/gray/issues/61)
+
 ### Colored borders
 
 Colored borders will be also converted to grayscale in non-polyfill browsers. To also convert to grayscale in polyfill browsers, the class `grayscale-replaced` can be used:
