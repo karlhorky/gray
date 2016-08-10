@@ -1,8 +1,6 @@
 # gray
 
-![Bower version](https://img.shields.io/bower/v/gray.svg?style=flat) ![npm version](https://img.shields.io/npm/v/jquery-gray.svg?style=flat)
-
-Make an image gray in all browsers.
+Make an image gray in all browsers.<img align="right" src="https://img.shields.io/npm/v/jquery-gray.svg?style=flat" alt="npm version">
 
 #### [Demo](http://work.karlhorky.com/gray/)
 
