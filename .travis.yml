@@ -1,0 +1,10 @@
+language: node_js
+deploy:
+  provider: npm
+  email: karl.horky@gmail.com
+  api_key:
+    secure: Kf9l3hRuNlWd/7LUOmzu7Tky8r5eGNWl4Tlh6xE2qViOov5WVLQyrb+22MSYfuPBcOb7F++rUMeCpz8Ef6rz8rTrKFMYgNXNSVTe35Zi7BnE6jf0GvPi8gkQLgNwxywEB4jRvRV8O+lanuVROHsiK3O2taktE5YG7+nP0pbT9Cw=
+  on:
+    tags: true
+    repo: karlhorky/gray
+    branch: gh-pages
