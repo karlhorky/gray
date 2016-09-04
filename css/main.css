@@ -24,10 +24,25 @@ h2 {
 h3 {
   font-size: 14px;
   text-align: left;
-  background: #cfcfcf;
+  background: #aaa;
   margin: 20px 0 25px;
   padding: 8px 10px;
+  border-radius: 4px;
+}
+
+h3,
+h3 a {
   color: #fff;
+  text-decoration: none;
+}
+
+h3 a:hover:before {
+  content: '#';
+  font-size: 20px;
+  color: #aaa;
+  position: absolute;
+  margin-left: -30px;
+  margin-top: -4px;
 }
 
 .container {
