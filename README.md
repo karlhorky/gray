@@ -1,13 +1,13 @@
 # gray
 
-Make an image gray in all browsers.<img align="right" src="https://img.shields.io/npm/v/jquery-gray.svg?style=flat" alt="npm version">
+CSS Styles and jQuery plugin to display images in grayscale.<img align="right" src="https://img.shields.io/npm/v/jquery-gray.svg?style=flat" alt="npm version">
 
 #### [Demo](https://work.karlhorky.com/gray/)
 
 Support:
 
-- IE 6-11 (10 and 11 use polyfill)
-- Edge 12+ (12 uses polyfill)
+- IE 6-11 (10 and 11 use the JavaScript polyfill)
+- Edge 12+ (12 uses the JavaScript polyfill)
 - Firefox 10+, Firefox on Android
 - Chrome 19+, Chrome for Android 25+
 - Android Browser 4.4+
