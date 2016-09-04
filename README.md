@@ -97,7 +97,11 @@ Or you can just [download](https://github.com/karlhorky/gray/archive/gh-pages.zi
 
 ### Non-numeric background-size and background-position
 
-Non-numeric background-size (cover, contain, ...) and background-position (center, ...) are not currently supported.
+Non-numeric background-size (`cover`, `contain`, ...) and background-position (`center`, ...) are not currently supported.
+
+### Percentage-based background-position
+
+Percentage-based background-position (ex. `50% 50%`, ...) is not currently supported.
 
 ### Non-visible elements will not be correctly initialized
 
