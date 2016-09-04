@@ -125,7 +125,7 @@ The ```jquery.gray``` plugin uses the ```Modernizr._prefixes```, ```css-filters`
 
 ## Changelog
 
-- v1.5.0: Add SVG <title> to polyfill for accessibility ([demo](https://work.karlhorky.com/gray/#img-alt))
+- v1.5.0: Add SVG &lt;title&gt; to polyfill for accessibility ([demo](https://work.karlhorky.com/gray/#img-alt))
 - v1.4.5: Fix sizing of img tags with padding
 - v1.4.4: Fix bug with missing padding properties with background images
 - v1.4.3: Fix bug with padding on img tag
