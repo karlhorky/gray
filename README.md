@@ -2,7 +2,7 @@
 
 Make an image gray in all browsers.<img align="right" src="https://img.shields.io/npm/v/jquery-gray.svg?style=flat" alt="npm version">
 
-#### [Demo](http://work.karlhorky.com/gray/)
+#### [Demo](https://work.karlhorky.com/gray/)
 
 Support:
 
@@ -41,7 +41,7 @@ Or you can just [download](https://github.com/karlhorky/gray/archive/gh-pages.zi
 ## How to Use
 
 1. Add the CSS from [gray.css](https://github.com/karlhorky/gray/blob/gh-pages/css/gray.css).
-    
+
     If you want to use your own CSS selector instead of `.grayscale`, edit or copy the CSS.
 
 2. Add the plugin after jQuery at the bottom of the body.
@@ -125,6 +125,7 @@ The ```jquery.gray``` plugin uses the ```Modernizr._prefixes```, ```css-filters`
 
 ## Changelog
 
+- v1.5.0: Add SVG <title> to polyfill for accessibility ([demo](https://work.karlhorky.com/gray/#img-alt))
 - v1.4.5: Fix sizing of img tags with padding
 - v1.4.4: Fix bug with missing padding properties with background images
 - v1.4.3: Fix bug with padding on img tag
