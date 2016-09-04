@@ -1,4 +1,4 @@
-/*! Gray v1.4.5 (https://github.com/karlhorky/gray) | MIT */
+/*! Gray v1.5.0 (https://github.com/karlhorky/gray) | MIT */
 .grayscale {
   /* Firefox 10-34 */
   filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='saturate' values='0'/></filter></svg>#grayscale");

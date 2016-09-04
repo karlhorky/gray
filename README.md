@@ -32,8 +32,8 @@ bower install --save gray
 Or use the CDN links:
 
 ```
-https://npmcdn.com/jquery-gray@1.4.5/css/gray.min.css
-https://npmcdn.com/jquery-gray@1.4.5/js/jquery.gray.min.js
+https://npmcdn.com/jquery-gray@1.5.0/css/gray.min.css
+https://npmcdn.com/jquery-gray@1.5.0/js/jquery.gray.min.js
 ```
 
 Or you can just [download](https://github.com/karlhorky/gray/archive/gh-pages.zip) it.
