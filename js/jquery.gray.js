@@ -11,7 +11,8 @@
         classes: {
           fade: 'grayscale-fade'
         }
-      };
+      },
+      id = 0;
 
   function Plugin (element, options) {
     var classes,
@@ -24,6 +25,7 @@
     options.fade = options.fade || element.className.indexOf(fadeClass) > -1;
 
     this.element = element;
+    this.elementId = id++;
     this.settings = $.extend({}, defaults, options);
     this._defaults = defaults;
     this._name = pluginName;
@@ -246,6 +248,8 @@
       var type,
           params,
           classes,
+          labelledby,
+          title,
           template;
 
       type   = this.elementType(element);
@@ -253,9 +257,18 @@
 
       classes = this.settings.fade ? this.settings.classes.fade : '';
 
+      labelledby = element[0].alt ?
+        ' aria-labelledby="gray-title-' + this.elementId + '"' :
+        '';
+
+      title = element[0].alt ?
+        '<title id="gray-title-' + this.elementId + '">' + element[0].alt + '</title>' :
+        '';
+
       template = $(
         '<div class="grayscale grayscale-replaced ' + classes + '">' +
-          '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ' + params.svg.width + ' ' + params.svg.height + '" width="' + params.svg.width + '" height="' + params.svg.height + '" style="' + params.svg.offset + '">' +
+          '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ' + params.svg.width + ' ' + params.svg.height + '" width="' + params.svg.width + '" height="' + params.svg.height + '" style="' + params.svg.offset + '" role="img"' + labelledby + '>' +
+            title +
             '<image filter="url(&quot;#gray&quot;)" x="0" y="0" width="' + params.image.width + '" height="' + params.image.height + '" preserveAspectRatio="none" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="' + params.svg.url + '" />' +
           '</svg>' +
         '</div>');
