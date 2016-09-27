@@ -111,6 +111,10 @@ Calling the plugin on hidden images (or other images that cannot have their size
 
 Target elements with child elements will have those child elements removed in browsers without support for CSS filters. [#61](https://github.com/karlhorky/gray/issues/61)
 
+### Event listeners removed in browsers without support for CSS filters
+
+Target elements with event listeners removed in browsers without support for CSS filters. [#65](https://github.com/karlhorky/gray/issues/65)
+
 ### Colored borders
 
 Colored borders will be also converted to grayscale in non-polyfill browsers. To also convert to grayscale in polyfill browsers, the class `grayscale-replaced` can be used:
