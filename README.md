@@ -32,8 +32,8 @@ bower install --save gray
 Or use the CDN links:
 
 ```
-https://npmcdn.com/jquery-gray@1.5.0/css/gray.min.css
-https://npmcdn.com/jquery-gray@1.5.0/js/jquery.gray.min.js
+https://npmcdn.com/jquery-gray@1.6.0/css/gray.min.css
+https://npmcdn.com/jquery-gray@1.6.0/js/jquery.gray.min.js
 ```
 
 Or you can just [download](https://github.com/karlhorky/gray/archive/gh-pages.zip) it.
@@ -50,7 +50,7 @@ Or you can just [download](https://github.com/karlhorky/gray/archive/gh-pages.zi
     <script src="/js/jquery.gray.min.js"></script>
     ```
 
-    The plugin automatically initializes for all elements with a class of ```grayscale```.
+    The plugin automatically initializes for all elements with a class of `grayscale`.
 
     The plugin can also be called manually with:
 
@@ -64,7 +64,7 @@ Or you can just [download](https://github.com/karlhorky/gray/archive/gh-pages.zi
     $('.grayscale').toggleClass('grayscale-off');
     ```
 
-3. Add your image with a class of ```grayscale```.
+3. Add your image with a class of `grayscale`.
 
     ```html
     <img src="/img/color.jpg" class="grayscale">
@@ -85,13 +85,15 @@ Or you can just [download](https://github.com/karlhorky/gray/archive/gh-pages.zi
 
     Non-numeric background-size (cover, contain, ...) and background-position (center, ...) are not currently supported (pull requests welcome!).
 
-4. (Optional) Add class of ```grayscale-fade``` if you want transitioning from grayscale back to color on hover
+4. (Optional) Add class of `grayscale-fade` if you want transitioning from grayscale back to color on hover
 
     ```html
     <img src="/img/color.jpg" class="grayscale grayscale-fade">
     ```
 
-5. Revel in your absolute and utter awesomeness.
+5. If you are using Modernizr already, make sure that the [required feature detects](https://github.com/karlhorky/gray#modernizr) are included in your build.
+
+6. Revel in your absolute and utter awesomeness.
 
 ## Caveats
 
@@ -127,12 +129,15 @@ Colored borders will be also converted to grayscale in non-polyfill browsers. To
 
 ## How it Works
 
-In [browsers that support css filters](http://caniuse.com/#feat=css-filters), the styles in ```gray.css``` will use CSS filters to turn the image gray.
+In [browsers that support css filters](http://caniuse.com/#feat=css-filters), the styles in `gray.css` will use CSS filters to turn the image gray.
 
-The ```jquery.gray``` plugin uses the ```Modernizr._prefixes```, ```css-filters```, ```Inline SVG``` and ```svg-filters``` feature detects from Modernizr to determine browser support. If a browser supports inline SVG and SVG filters but not CSS filters, the plugin replaces the elements with SVG elements with filters.
+### Modernizr
+
+The `jquery.gray` plugin uses the [`Modernizr._prefixes`, `css-filters`, `Inline SVG` and `svg-filters` feature detects](https://modernizr.com/download/?cssfilters-inlinesvg-svgfilters-prefixes-setclasses) from Modernizr to determine browser support. If a browser supports inline SVG and SVG filters but not CSS filters, the plugin replaces the elements with SVG elements with filters.
 
 ## Changelog
 
+- v1.6.0: Throw error when modernizr feature detects not in build [#71](https://github.com/karlhorky/gray/issues/71) [#72](https://github.com/karlhorky/gray/issues/72)
 - v1.5.0: Add SVG &lt;title&gt; to polyfill for accessibility ([demo](https://work.karlhorky.com/gray/#img-alt))
 - v1.4.5: Fix sizing of img tags with padding
 - v1.4.4: Fix bug with missing padding properties with background images
