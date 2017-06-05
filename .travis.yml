@@ -8,3 +8,5 @@ deploy:
     tags: true
     repo: karlhorky/gray
     branch: gh-pages
+notifications:
+  email: false
