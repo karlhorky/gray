@@ -32,8 +32,8 @@ bower install --save gray
 Or use the CDN links:
 
 ```
-https://npmcdn.com/jquery-gray@1.6.0/css/gray.min.css
-https://npmcdn.com/jquery-gray@1.6.0/js/jquery.gray.min.js
+https://npmcdn.com/jquery-gray@1.7.0/css/gray.min.css
+https://npmcdn.com/jquery-gray@1.7.0/js/jquery.gray.min.js
 ```
 
 Or you can just [download](https://github.com/karlhorky/gray/archive/gh-pages.zip) it.
@@ -42,54 +42,57 @@ Or you can just [download](https://github.com/karlhorky/gray/archive/gh-pages.zi
 
 1. Add the CSS from [gray.css](https://github.com/karlhorky/gray/blob/gh-pages/css/gray.css).
 
-    If you want to use your own CSS selector instead of `.grayscale`, edit or copy the CSS.
+   If you want to use your own CSS selector instead of `.grayscale`, edit or copy the CSS.
 
 2. Add the plugin after jQuery at the bottom of the body.
 
-    ```html
-    <script src="/js/jquery.gray.min.js"></script>
-    ```
+   ```html
+   <script src="/js/jquery.gray.min.js"></script>
+   ```
 
-    The plugin automatically initializes for all elements with a class of `grayscale`.
+   The plugin automatically initializes for all elements with a class of `grayscale`.
 
-    The plugin can also be called manually with:
+   The plugin can also be called manually with:
 
-    ```javascript
-    $('.my-grayscale-class').gray();
-    ```
+   ```javascript
+   $('.my-grayscale-class').gray();
+   ```
 
-    The effect can be toggled with the `grayscale-off` class:
+   The effect can be toggled with the `grayscale-off` class:
 
-    ```javascript
-    $('.grayscale').toggleClass('grayscale-off');
-    ```
+   ```javascript
+   $('.grayscale').toggleClass('grayscale-off');
+   ```
 
 3. Add your image with a class of `grayscale`.
 
-    ```html
-    <img src="/img/color.jpg" class="grayscale">
-    ```
+   ```html
+   <img src="/img/color.jpg" class="grayscale" />
+   ```
 
-    Images with CSS background-image, background-size and (numeric) background-position are also supported:
+   Images with CSS background-image, background-size and (numeric) background-position are also supported:
 
-    ```html
-    <div style="
-      background-image   : url(/img/color-sprite-lg.jpg);
-      background-size    : auto 72px;
-      background-position: -180px 0;
-      display            : inline-block;
-      width              : 180px;
-      height             : 72px;
-    " class="grayscale"></div>
-    ```
+   ```html
+   <div
+     style="
+     background-image   : url(/img/color-sprite-lg.jpg);
+     background-size    : auto 72px;
+     background-position: -180px 0;
+     display            : inline-block;
+     width              : 180px;
+     height             : 72px;
+   "
+     class="grayscale"
+   ></div>
+   ```
 
-    Non-numeric background-size (cover, contain, ...) and background-position (center, ...) are not currently supported (pull requests welcome!).
+   Non-numeric background-size (cover, contain, ...) and background-position (center, ...) are not currently supported (pull requests welcome!).
 
 4. (Optional) Add class of `grayscale-fade` if you want transitioning from grayscale back to color on hover
 
-    ```html
-    <img src="/img/color.jpg" class="grayscale grayscale-fade">
-    ```
+   ```html
+   <img src="/img/color.jpg" class="grayscale grayscale-fade" />
+   ```
 
 5. If you are using Modernizr already, make sure that the [required feature detects](https://github.com/karlhorky/gray#modernizr) are included in your build.
 
@@ -137,6 +140,7 @@ The `jquery.gray` plugin uses the [`Modernizr._prefixes`, `css-filters`, `Inline
 
 ## Changelog
 
+- v1.7.0: Upgrade Modernizr [#80](https://github.com/karlhorky/gray/issues/80)
 - v1.6.0: Throw error when modernizr feature detects not in build [#71](https://github.com/karlhorky/gray/issues/71) [#72](https://github.com/karlhorky/gray/issues/72)
 - v1.5.0: Add SVG &lt;title&gt; to polyfill for accessibility ([demo](https://work.karlhorky.com/gray/#img-alt))
 - v1.4.5: Fix sizing of img tags with padding
