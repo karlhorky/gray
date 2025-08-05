@@ -2,7 +2,7 @@
 
 CSS Styles and jQuery plugin to display images in grayscale.<img align="right" src="https://img.shields.io/npm/v/jquery-gray.svg?style=flat" alt="npm version">
 
-#### [Demo](https://work.karlhorky.com/gray/)
+#### [Demo](https://karlhorky.github.io/gray/)
 
 Support:
 
@@ -142,7 +142,7 @@ The `jquery.gray` plugin uses the [`Modernizr._prefixes`, `css-filters`, `Inline
 
 - v1.7.0: Upgrade Modernizr [#80](https://github.com/karlhorky/gray/issues/80)
 - v1.6.0: Throw error when modernizr feature detects not in build [#71](https://github.com/karlhorky/gray/issues/71) [#72](https://github.com/karlhorky/gray/issues/72)
-- v1.5.0: Add SVG &lt;title&gt; to polyfill for accessibility ([demo](https://work.karlhorky.com/gray/#img-alt))
+- v1.5.0: Add SVG &lt;title&gt; to polyfill for accessibility ([demo](https://karlhorky.github.io/gray/#img-alt))
 - v1.4.5: Fix sizing of img tags with padding
 - v1.4.4: Fix bug with missing padding properties with background images
 - v1.4.3: Fix bug with padding on img tag
